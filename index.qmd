@@ -1,10 +1,10 @@
 ---
-title: La Palma Earthquakes
+title: Omnomnomnivores
 author:
-  - name: Steve Purves
-    orcid: 0000-0002-0760-5497
-    corresponding: true
-    email: steve@curvenote.com
+  - name: Tanya Strydom
+    orcid: 0000-0001-6067-1349
+    corresponding: false
+    email: t.strydom@sheffield.ac.uk
     roles:
       - Investigation
       - Project administration
@@ -12,15 +12,17 @@ author:
       - Visualization
     affiliations:
       - Curvenote
-  - name: Rowan Cockett
-    orcid: 0000-0002-7859-8394
-    corresponding: false
+  - name: Timothée Poisot
+    orcid: 0000-0002-0735-5184
+    corresponding: true
+    email: timothee.poisot@umontreal.ca
     roles: []
     affiliations:
-      - Curvenote
+      - Université de Montreal
+      - Québec Centre for Biodiversity Sciences
 keywords:
-  - La Palma
-  - Earthquakes
+  - wombling
+  - spatial networks
 abstract: |
   In September 2021, a significant jump in seismic activity on the island of La Palma (Canary Islands, Spain) signaled the start of a volcanic crisis that still continues at the time of writing. Earthquake data is continually collected and published by the Instituto Geográphico Nacional (IGN). ...
 plain-language-summary: |
