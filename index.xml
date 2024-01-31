@@ -23,19 +23,19 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 
 
 <title-group>
-<article-title>La Palma Earthquakes</article-title>
+<article-title>Omnomnomnivores</article-title>
 </title-group>
 
 <contrib-group>
-<contrib contrib-type="author" corresp="yes">
-<contrib-id contrib-id-type="orcid">0000-0002-0760-5497</contrib-id>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">0000-0001-6067-1349</contrib-id>
 <name>
-<surname>Purves</surname>
-<given-names>Steve</given-names>
+<surname>Strydom</surname>
+<given-names>Tanya</given-names>
 </name>
-<string-name>Steve Purves</string-name>
+<string-name>Tanya Strydom</string-name>
 
-<email>steve@curvenote.com</email>
+<email>t.strydom@sheffield.ac.uk</email>
 <role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">Investigation</role>
 <role vocab="https://credit.niso.org" vocab-term="project
 administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">Project
@@ -43,17 +43,19 @@ administration</role>
 <role vocab="https://credit.niso.org" vocab-term="software" vocab-term-identifier="https://credit.niso.org/contributor-roles/software/">Software</role>
 <role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">Visualization</role>
 <xref ref-type="aff" rid="aff-1">a</xref>
-<xref ref-type="corresp" rid="cor-1">&#x002A;</xref>
 </contrib>
-<contrib contrib-type="author">
-<contrib-id contrib-id-type="orcid">0000-0002-7859-8394</contrib-id>
+<contrib contrib-type="author" corresp="yes">
+<contrib-id contrib-id-type="orcid">0000-0002-0735-5184</contrib-id>
 <name>
-<surname>Cockett</surname>
-<given-names>Rowan</given-names>
+<surname>Poisot</surname>
+<given-names>Timothée</given-names>
 </name>
-<string-name>Rowan Cockett</string-name>
+<string-name>Timothée Poisot</string-name>
 
-<xref ref-type="aff" rid="aff-1">a</xref>
+<email>timothee.poisot@umontreal.ca</email>
+<xref ref-type="aff" rid="aff-2">b</xref>
+<xref ref-type="aff" rid="aff-3">c</xref>
+<xref ref-type="corresp" rid="cor-2">&#x002A;</xref>
 </contrib>
 </contrib-group>
 <aff id="aff-1">
@@ -68,14 +70,38 @@ administration</role>
 
 
 </aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>Université de Montreal</institution>
+</institution-wrap>
+
+
+
+
+
+
+
+</aff>
+<aff id="aff-3">
+<institution-wrap>
+<institution>Québec Centre for Biodiversity Sciences</institution>
+</institution-wrap>
+
+
+
+
+
+
+
+</aff>
 <author-notes>
-<corresp id="cor-1">steve@curvenote.com</corresp>
+<corresp id="cor-2">timothee.poisot@umontreal.ca</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-01-30">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-01-31">
 <year>2024</year>
 <month>1</month>
-<day>30</day>
+<day>31</day>
 </pub-date>
 
 
@@ -95,8 +121,8 @@ data is continually collected and published by the Instituto Geográphico
 Nacional (IGN). …</p>
 </abstract>
 <kwd-group kwd-group-type="author">
-<kwd>La Palma</kwd>
-<kwd>Earthquakes</kwd>
+<kwd>wombling</kwd>
+<kwd>spatial networks</kwd>
 </kwd-group>
 
 
@@ -109,113 +135,258 @@ Nacional (IGN). …</p>
 <body>
 <sec id="introduction">
   <title>1 Introduction</title>
-  <fig id="fig-timeline">
-    <caption><p>Figure 1: Timeline of recent earthquakes on La
-    Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-timeline-output-1.png" />
-  </fig>
-  <p>Based on data up to and including 1971, eruptions on La Palma
-  happen every 79.8 years on average.</p>
-  <p>Studies of the magma systems feeding the volcano, such as Marrero
-  et al.
-  (<xref alt="2019" rid="ref-marrero2019" ref-type="bibr">2019</xref>),
-  have proposed that there are two main magma reservoirs feeding the
-  Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges
-  and in turn feeds a shallower crustal reservoir (10-20km depth).</p>
-  <p>Eight eruptions have been recorded since the late 1400s
-  (<xref alt="Figure 1" rid="fig-timeline">Figure 1</xref>).</p>
-  <p>Data and methods are discussed in
-  <xref alt="Section 2" rid="sec-data-methods">Section 2</xref>.</p>
-  <p>Let <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  denote the number of eruptions in a year. Then,
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  can be modeled by a Poisson distribution</p>
-  <p><styled-content id="eq-poisson"><disp-formula><alternatives>
+</sec>
+<sec id="sec-data-methods">
+  <title>2 Data &amp; Methods</title>
+  <p>The metacommunity model developed by Thompson and Gonzalez
+  (<xref alt="2017" rid="ref-Thompson2017Dispersala" ref-type="bibr">2017</xref>)
+  is a good starting point to use for this ‘case study’ as it allows us
+  some flexibility with how we want to parameterise the system. The
+  model (<xref alt="Equation 1" rid="eq-metacomm">Equation 1</xref>)
+  itself is based on a tritrophic community (‘plants’, ‘herbivores’, and
+  ‘carnivores’) and is a collection of modified Lotka–Volterra equations
+  and (broadly) models species abundance as a function of interaction
+  strength, environmental effect, immigration, and emigration. The
+  metacommunity consists of <inline-formula><alternatives>
+  <tex-math><![CDATA[S]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>S</mml:mi></mml:math></alternatives></inline-formula>
+  species with <inline-formula><alternatives>
+  <tex-math><![CDATA[M]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>M</mml:mi></mml:math></alternatives></inline-formula>
+  environmental patches and looks as follows:</p>
+  <p><styled-content id="eq-metacomm"><disp-formula><alternatives>
   <tex-math><![CDATA[
-  p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
+  X_{ij}(t+1)=X_{ij}(t)exp\left[C_{i} + \sum_{k=1}^{S}B_{ik}X_{kj}(t)+A_{ij}(t)\right]+I_{ij}(t)-X_{ij}(t)a_{i}
    \qquad(1)]]></tex-math>
-  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>p</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mo>−</mml:mo><mml:mi>λ</mml:mi></mml:mrow></mml:msup><mml:msup><mml:mi>λ</mml:mi><mml:mi>x</mml:mi></mml:msup></mml:mrow><mml:mrow><mml:mi>x</mml:mi><mml:mi>!</mml:mi></mml:mrow></mml:mfrac><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
-  <p>where <inline-formula><alternatives>
-  <tex-math><![CDATA[\lambda]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>
-  is the rate of eruptions per year. Using
-  <xref alt="Equation 1" rid="eq-poisson">Equation 1</xref>, the
-  probability of an eruption in the next <inline-formula><alternatives>
+  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mi>e</mml:mi><mml:mi>x</mml:mi><mml:mi>p</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>S</mml:mi></mml:munderover><mml:msub><mml:mi>B</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:msub><mml:mi>A</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:msub><mml:mi>I</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:msub><mml:mi>a</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
+  <p>Where <inline-formula><alternatives>
+  <tex-math><![CDATA[X_{ij}(t)]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
+  is the abundance of species <inline-formula><alternatives>
+  <tex-math><![CDATA[i]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>
+  in patch <inline-formula><alternatives>
+  <tex-math><![CDATA[j]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
+  at time <inline-formula><alternatives>
   <tex-math><![CDATA[t]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
-  years can be calculated.</p>
-  <fig id="tbl-history">
-    <caption><p>Table 1: Recent historic eruptions on La
-    Palma</p></caption>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>.
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[C_i]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+  is its intrinsic rate of increase (which we have set to 0.1 for
+  ‘plants’ and -0.01 for ‘herbivores’ and ‘carnivores’).
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[B_{ik}]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>B</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub></mml:math></alternatives></inline-formula>
+  is the per capita effect of species <inline-formula><alternatives>
+  <tex-math><![CDATA[k]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>k</mml:mi></mml:math></alternatives></inline-formula>
+  on species <inline-formula><alternatives>
+  <tex-math><![CDATA[i]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>.
+  The exact interaction strength for each species pair is drawn from a
+  uniform distribution with the parameters for the interaction pairs
+  listed in
+  <xref alt="Table 1" rid="tbl-interaction_strength">Table 1</xref>, the
+  values drawn from the uniform distribution are scaled by dividing by
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[0.33S]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mn>0.33</mml:mn><mml:mi>S</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
+  to yield the final interaction strength for each interacting pair.</p>
+  <fig id="tbl-interaction_strength">
+    <caption><p>Table 1: Intervals used for the uniform distribution
+    from which interaction strengths values are drawn from for the
+    different types of species pair interactions. Note this is represent
+    the effect of species type 1 on species type 2
+    <italic>i.e.,</italic> herbivore-plant represents the effect of a
+    herbivore species on a plant species</p></caption>
     <table-wrap>
       <table>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Year</th>
+            <th>Interacting pair</th>
+            <th>Range of uniform distribution</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Current</td>
-            <td>2021</td>
+            <td>Plant-plant</td>
+            <td>-1 – 0</td>
           </tr>
           <tr>
-            <td>Teneguía</td>
-            <td>1971</td>
+            <td>Plant-herbivore</td>
+            <td>0 – 0.1</td>
           </tr>
           <tr>
-            <td>Nambroque</td>
-            <td>1949</td>
+            <td>Plant-carnivore</td>
+            <td>0</td>
           </tr>
           <tr>
-            <td>El Charco</td>
-            <td>1712</td>
+            <td>Herbivore-plant</td>
+            <td>-0.3 – 0</td>
           </tr>
           <tr>
-            <td>Volcán San Antonio</td>
-            <td>1677</td>
+            <td>Herbivore-herbivore</td>
+            <td>-0.2– -0.15</td>
           </tr>
           <tr>
-            <td>Volcán San Martin</td>
-            <td>1646</td>
+            <td>Herbivore-carnivore</td>
+            <td>0 – 0.08</td>
           </tr>
           <tr>
-            <td>Tajuya near El Paso</td>
-            <td>1585</td>
+            <td>Carnivore-plant</td>
+            <td>0</td>
           </tr>
           <tr>
-            <td>Montaña Quemada</td>
-            <td>1492</td>
+            <td>Carnivore-herbivore</td>
+            <td>-0.1 – 0</td>
+          </tr>
+          <tr>
+            <td>Carnivore-carnivore</td>
+            <td>-0.1 – 0</td>
           </tr>
         </tbody>
       </table>
     </table-wrap>
   </fig>
-  <p><xref alt="Table 1" rid="tbl-history">Table 1</xref> summarises the
-  eruptions recorded since the colonization of the islands by Europeans
-  in the late 1400s.</p>
-  <fig id="fig-map">
-    <caption><p>Figure 2: Map of La Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="images/la-palma-map.png" />
+  <p><inline-formula><alternatives>
+  <tex-math><![CDATA[A_{ij}(t)]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>A</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
+  is the effect of the environment in patch
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[j]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
+  on species <inline-formula><alternatives>
+  <tex-math><![CDATA[i]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>
+  at time <inline-formula><alternatives>
+  <tex-math><![CDATA[t]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
+  and can be further expanded as follows:</p>
+  <p><styled-content id="eq-metacomm_env"><disp-formula><alternatives>
+  <tex-math><![CDATA[
+  A_{ij}(t)=h\left(exp-\frac{(E_{j}(t)-H_{i})^2}{2\sigma^2}-1\right)
+   \qquad(2)]]></tex-math>
+  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>A</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mi>h</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>e</mml:mi><mml:mi>x</mml:mi><mml:mi>p</mml:mi><mml:mo>−</mml:mo><mml:mfrac><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>E</mml:mi><mml:mi>j</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mi>H</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mrow><mml:mn>2</mml:mn><mml:msup><mml:mi>σ</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:mfrac><mml:mo>−</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
+  <p>Species environmental optima (<inline-formula><alternatives>
+  <tex-math><![CDATA[H_i]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>H</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula>)
+  are evenly distributed across the entire range of environmental
+  conditions for each trophic level, meaning that species from different
+  trophic levels will be at, or near the same environmental optima.
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[h]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>h</mml:mi></mml:math></alternatives></inline-formula>
+  is a scaling parameter (set to 300), <inline-formula><alternatives>
+  <tex-math><![CDATA[E_j(t)]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>E</mml:mi><mml:mi>j</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
+  is the environment in patch <inline-formula><alternatives>
+  <tex-math><![CDATA[j]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
+  at time <inline-formula><alternatives>
+  <tex-math><![CDATA[t]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
+  and <inline-formula><alternatives>
+  <tex-math><![CDATA[\sigma]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>σ</mml:mi></mml:math></alternatives></inline-formula>
+  is the standard deviation (set to 50).</p>
+  <p><inline-formula><alternatives>
+  <tex-math><![CDATA[I_{ij}(t)]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>I</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
+  is the abundance of species <inline-formula><alternatives>
+  <tex-math><![CDATA[i]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>
+  immigrating to patch <inline-formula><alternatives>
+  <tex-math><![CDATA[j]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
+  at time <inline-formula><alternatives>
+  <tex-math><![CDATA[t]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
+  and can be expanded as follows:</p>
+  <p><styled-content id="eq-metacomm_imm"><disp-formula><alternatives>
+  <tex-math><![CDATA[
+  I_{ij}(t)=\sum_{l=j}^{M}a_iX_{il}(t)exp(-Ld_{jl})
+   \qquad(3)]]></tex-math>
+  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>I</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>l</mml:mi><mml:mo>=</mml:mo><mml:mi>j</mml:mi></mml:mrow><mml:mi>M</mml:mi></mml:munderover><mml:msub><mml:mi>a</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>l</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mi>e</mml:mi><mml:mi>x</mml:mi><mml:mi>p</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mo>−</mml:mo><mml:mi>L</mml:mi><mml:msub><mml:mi>d</mml:mi><mml:mrow><mml:mi>j</mml:mi><mml:mi>l</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>3</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
+  <p>Where <inline-formula><alternatives>
+  <tex-math><![CDATA[ai]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>a</mml:mi><mml:mi>i</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
+  is the proportion of the population of species
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[i]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>
+  that disperses at each time step, the dispersal rate is drawn from a
+  normal distribution (<inline-formula><alternatives>
+  <tex-math><![CDATA[\mu]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>μ</mml:mi></mml:math></alternatives></inline-formula>
+  = 0.1, <inline-formula><alternatives>
+  <tex-math><![CDATA[\sigma]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>σ</mml:mi></mml:math></alternatives></inline-formula>
+  = 0.025) for each species. The abundance of immigrants to patch
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[j]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
+  from all other patches is governed by where
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[d_{jl}]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>d</mml:mi><mml:mrow><mml:mi>j</mml:mi><mml:mi>l</mml:mi></mml:mrow></mml:msub></mml:math></alternatives></inline-formula>
+  is the geographic distance between patches
+  <inline-formula><alternatives>
+  <tex-math><![CDATA[j]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
+  and <inline-formula><alternatives>
+  <tex-math><![CDATA[l]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>l</mml:mi></mml:math></alternatives></inline-formula>,
+  and <inline-formula><alternatives>
+  <tex-math><![CDATA[L]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>L</mml:mi></mml:math></alternatives></inline-formula>
+  (the strength of the exponential decrease in dispersal with distance),
+  which is also drawn from a normal distribution for each species. The
+  parameters used for <inline-formula><alternatives>
+  <tex-math><![CDATA[L]]></tex-math>
+  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>L</mml:mi></mml:math></alternatives></inline-formula>
+  are trophic level dependant and are show in
+  <xref alt="Table 2" rid="tbl-interaction_decay">Table 2</xref></p>
+  <fig id="tbl-interaction_decay">
+    <caption><p>Table 2: Parameters for the normal distributions used to
+    determine the dispersal decay (<inline-formula><alternatives>
+    <tex-math><![CDATA[L]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>L</mml:mi></mml:math></alternatives></inline-formula>)
+    for each species depending on its trophic level.</p></caption>
+    <table-wrap>
+      <table>
+        <thead>
+          <tr>
+            <th>Trophic level</th>
+            <th><inline-formula><alternatives>
+            <tex-math><![CDATA[\mu]]></tex-math>
+            <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>μ</mml:mi></mml:math></alternatives></inline-formula></th>
+            <th><inline-formula><alternatives>
+            <tex-math><![CDATA[\sigma]]></tex-math>
+            <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>σ</mml:mi></mml:math></alternatives></inline-formula></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Plant</td>
+            <td>0.3</td>
+            <td>0.075</td>
+          </tr>
+          <tr>
+            <td>Herbivore</td>
+            <td>0.2</td>
+            <td>0.05</td>
+          </tr>
+          <tr>
+            <td>Carnivore</td>
+            <td>0.1</td>
+            <td>0.025</td>
+          </tr>
+        </tbody>
+      </table>
+    </table-wrap>
   </fig>
-  <p>La Palma is one of the west most islands in the Volcanic
-  Archipelago of the Canary Islands
-  (<xref alt="Figure 2" rid="fig-map">Figure 2</xref>).</p>
-  <fig id="fig-spatial-plot">
-    <caption><p>Figure 3: Locations of earthquakes on La Palma since
-    2017.</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-data-screening-fig-spatial-plot-output-1.png" />
-  </fig>
-  <p><xref alt="Figure 3" rid="fig-spatial-plot">Figure 3</xref> shows
-  the location of recent Earthquakes on La Palma.</p>
-</sec>
-<sec id="sec-data-methods">
-  <title>2 Data &amp; Methods</title>
 </sec>
 <sec id="conclusion">
   <title>3 Conclusion</title>
@@ -225,273 +396,25 @@ Nacional (IGN). …</p>
 <back>
 <ref-list>
   <title>References</title>
-  <ref id="ref-marrero2019">
+  <ref id="ref-Thompson2017Dispersala">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
-        <name><surname>Marrero</surname><given-names>José</given-names></name>
-        <name><surname>García</surname><given-names>Alicia</given-names></name>
-        <name><surname>Berrocoso</surname><given-names>Manuel</given-names></name>
-        <name><surname>Llinares</surname><given-names>Ángeles</given-names></name>
-        <name><surname>Rodríguez-Losada</surname><given-names>Antonio</given-names></name>
-        <name><surname>Ortiz</surname><given-names>R.</given-names></name>
+        <name><surname>Thompson</surname><given-names>Patrick L.</given-names></name>
+        <name><surname>Gonzalez</surname><given-names>Andrew</given-names></name>
       </person-group>
-      <article-title>Strategies for the development of volcanic hazard maps in monogenetic volcanic fields: The example of La Palma (Canary Islands)</article-title>
-      <source>Journal of Applied Volcanology</source>
-      <year iso-8601-date="2019-07">2019</year><month>07</month>
-      <volume>8</volume>
-      <pub-id pub-id-type="doi">10.1186/s13617-019-0085-5</pub-id>
-      <fpage></fpage>
-      <lpage></lpage>
+      <article-title>Dispersal governs the reorganization of ecological networks under environmental change</article-title>
+      <source>Nature Ecology &amp; Evolution</source>
+      <publisher-name>Nature Publishing Group</publisher-name>
+      <publisher-loc>London, United States</publisher-loc>
+      <year iso-8601-date="2017-06">2017</year><month>06</month>
+      <volume>1</volume>
+      <issue>6</issue>
+      <pub-id pub-id-type="doi">10.1038/s41559-017-0162</pub-id>
     </element-citation>
   </ref>
 </ref-list>
 </back>
 
-<sub-article article-type="notebook" id="nb-8-nb-article">
-<front-stub>
-<title-group>
-<article-title>La Palma Earthquakes</article-title>
-</title-group>
-<contrib-group>
-<contrib contrib-type="author" corresp="yes">
-<contrib-id contrib-id-type="orcid">0000-0002-0760-5497</contrib-id>
-<name>
-<surname>Purves</surname>
-<given-names>Steve</given-names>
-</name>
-<string-name>Steve Purves</string-name>
-
-<email>steve@curvenote.com</email>
-<role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">Investigation</role>
-<role vocab="https://credit.niso.org" vocab-term="project
-administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">Project
-administration</role>
-<role vocab="https://credit.niso.org" vocab-term="software" vocab-term-identifier="https://credit.niso.org/contributor-roles/software/">Software</role>
-<role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">Visualization</role>
-<xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-<xref ref-type="corresp" rid="cor-1-nb-article">&#x002A;</xref>
-</contrib>
-<contrib contrib-type="author">
-<contrib-id contrib-id-type="orcid">0000-0002-7859-8394</contrib-id>
-<name>
-<surname>Cockett</surname>
-<given-names>Rowan</given-names>
-</name>
-<string-name>Rowan Cockett</string-name>
-
-<xref ref-type="aff" rid="aff-1-nb-article">a</xref>
-</contrib>
-</contrib-group>
-<aff id="aff-1-nb-article">
-<institution-wrap>
-<institution>Curvenote</institution>
-</institution-wrap>
-
-
-
-
-
-
-
-</aff>
-<author-notes>
-<corresp id="cor-1-nb-article">steve@curvenote.com</corresp>
-</author-notes>
-<abstract>
-<p>In September 2021, a significant jump in seismic activity on the
-island of La Palma (Canary Islands, Spain) signaled the start of a
-volcanic crisis that still continues at the time of writing. Earthquake
-data is continually collected and published by the Instituto Geográphico
-Nacional (IGN). …</p>
-</abstract>
-</front-stub>
-
-<body>
-<sec id="cell-67a3a4e8-nb-article" specific-use="notebook-content">
-<sec id="introduction-nb-article">
-  <title>1 Introduction</title>
-  </sec>
-  <sec id="c69ee907-nb-article" specific-use="notebook-code">
-  <code language="python">import matplotlib.pyplot as plt
-import numpy as np
-eruptions = [1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021]</code>
-  </sec>
-  <sec id="cell-fig-timeline-nb-article" specific-use="notebook-code">
-  <code language="python">plt.figure(figsize=(6, 1))
-plt.eventplot(eruptions, lineoffsets=0, linelengths=0.1, color='black')
-plt.gca().axes.get_yaxis().set_visible(False)
-plt.ylabel('')
-plt.show()</code>
-  <sec id="cell-fig-timeline-output-0-nb-article" specific-use="notebook-output">
-  <fig id="fig-timeline-nb-article">
-    <caption><p>Figure 1: Timeline of recent earthquakes on La
-    Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-timeline-output-1.png" />
-  </fig>
-  </sec>
-  </sec>
-  <sec id="b397d1c8-nb-article" specific-use="notebook-code">
-  <code language="python">avg_years_between_eruptions = np.mean(np.diff(eruptions[:-1]))
-avg_years_between_eruptions</code>
-  <sec id="b397d1c8-output-0-nb-article" specific-use="notebook-output">
-  <preformat>79.83333333333333</preformat>
-  </sec>
-  </sec>
-  <sec id="cell-1962cec2-nb-article" specific-use="notebook-content">
-  <p>Based on data up to and including 1971, eruptions on La Palma
-  happen every 79.8 years on average.</p>
-  <p>Studies of the magma systems feeding the volcano, such as Marrero
-  et al.
-  (<xref alt="2019" rid="ref-marrero2019-nb-article" ref-type="bibr">2019</xref>),
-  have proposed that there are two main magma reservoirs feeding the
-  Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges
-  and in turn feeds a shallower crustal reservoir (10-20km depth).</p>
-  <p>Eight eruptions have been recorded since the late 1400s
-  (<xref alt="Figure 1" rid="fig-timeline-nb-article">Figure 1</xref>).</p>
-  <p>Data and methods are discussed in
-  <xref alt="Section 2" rid="sec-data-methods-nb-article">Section 2</xref>.</p>
-  <p>Let <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  denote the number of eruptions in a year. Then,
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[x]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  can be modeled by a Poisson distribution</p>
-  <p><styled-content id="eq-poisson-nb-article"><disp-formula><alternatives>
-  <tex-math><![CDATA[
-  p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-   \qquad(1)]]></tex-math>
-  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>p</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mo>−</mml:mo><mml:mi>λ</mml:mi></mml:mrow></mml:msup><mml:msup><mml:mi>λ</mml:mi><mml:mi>x</mml:mi></mml:msup></mml:mrow><mml:mrow><mml:mi>x</mml:mi><mml:mi>!</mml:mi></mml:mrow></mml:mfrac><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
-  <p>where <inline-formula><alternatives>
-  <tex-math><![CDATA[\lambda]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>
-  is the rate of eruptions per year. Using
-  <xref alt="Equation 1" rid="eq-poisson-nb-article">Equation 1</xref>, the
-  probability of an eruption in the next <inline-formula><alternatives>
-  <tex-math><![CDATA[t]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
-  years can be calculated.</p>
-  <fig id="tbl-history-nb-article">
-    <caption><p>Table 1: Recent historic eruptions on La
-    Palma</p></caption>
-    <table-wrap>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Year</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Current</td>
-            <td>2021</td>
-          </tr>
-          <tr>
-            <td>Teneguía</td>
-            <td>1971</td>
-          </tr>
-          <tr>
-            <td>Nambroque</td>
-            <td>1949</td>
-          </tr>
-          <tr>
-            <td>El Charco</td>
-            <td>1712</td>
-          </tr>
-          <tr>
-            <td>Volcán San Antonio</td>
-            <td>1677</td>
-          </tr>
-          <tr>
-            <td>Volcán San Martin</td>
-            <td>1646</td>
-          </tr>
-          <tr>
-            <td>Tajuya near El Paso</td>
-            <td>1585</td>
-          </tr>
-          <tr>
-            <td>Montaña Quemada</td>
-            <td>1492</td>
-          </tr>
-        </tbody>
-      </table>
-    </table-wrap>
-  </fig>
-  <p><xref alt="Table 1" rid="tbl-history-nb-article">Table 1</xref> summarises the
-  eruptions recorded since the colonization of the islands by Europeans
-  in the late 1400s.</p>
-  <fig id="fig-map-nb-article">
-    <caption><p>Figure 2: Map of La Palma</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="images/la-palma-map.png" />
-  </fig>
-  <p>La Palma is one of the west most islands in the Volcanic
-  Archipelago of the Canary Islands
-  (<xref alt="Figure 2" rid="fig-map-nb-article">Figure 2</xref>).</p>
-  <sec id="cell-fig-spatial-plot-nb-article" specific-use="notebook-code">
-  <code language="python">from matplotlib import colormaps
-cmap = colormaps['viridis_r']
-ax = df.plot.scatter(x=&quot;Longitude&quot;, y=&quot;Latitude&quot;, 
-                     s=47-df[&quot;Depth(km)&quot;], c=df[&quot;Magnitude&quot;], 
-                     figsize=(12,10), grid=&quot;on&quot;, cmap=cmap)
-colorbar = ax.collections[0].colorbar
-colorbar.set_label(&quot;Magnitude&quot;)
-
-plt.show()</code>
-  <sec id="cell-fig-spatial-plot-output-0-nb-article" specific-use="notebook-output">
-  <fig id="fig-spatial-plot-nb-article">
-    <caption><p>Figure 3: Locations of earthquakes on La Palma since
-    2017.</p></caption>
-    <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-data-screening-fig-spatial-plot-output-1.png" />
-  </fig>
-  </sec>
-  </sec>
-  <p><xref alt="Figure 3" rid="fig-spatial-plot-nb-article">Figure 3</xref> shows
-  the location of recent Earthquakes on La Palma.</p>
-</sec>
-<sec id="sec-data-methods-nb-article">
-  <title>2 Data &amp; Methods</title>
-</sec>
-<sec id="conclusion-nb-article">
-  <title>3 Conclusion</title>
-</sec>
-<sec id="references-nb-article">
-  <title>References</title>
-  </sec>
-</sec>
-</body>
-
-
-
-<back>
-<ref-list>
-  <title></title>
-  <ref id="ref-marrero2019-nb-article">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Marrero</surname><given-names>José</given-names></name>
-        <name><surname>García</surname><given-names>Alicia</given-names></name>
-        <name><surname>Berrocoso</surname><given-names>Manuel</given-names></name>
-        <name><surname>Llinares</surname><given-names>Ángeles</given-names></name>
-        <name><surname>Rodríguez-Losada</surname><given-names>Antonio</given-names></name>
-        <name><surname>Ortiz</surname><given-names>R.</given-names></name>
-      </person-group>
-      <article-title>Strategies for the development of volcanic hazard maps in monogenetic volcanic fields: The example of La Palma (Canary Islands)</article-title>
-      <source>Journal of Applied Volcanology</source>
-      <year iso-8601-date="2019-07">2019</year><month>07</month>
-      <volume>8</volume>
-      <pub-id pub-id-type="doi">10.1186/s13617-019-0085-5</pub-id>
-      <fpage></fpage>
-      <lpage></lpage>
-    </element-citation>
-  </ref>
-</ref-list>
-</back>
-
-
-</sub-article>
 <sub-article article-type="notebook" id="nb-4-nb-1">
 <front-stub>
 <title-group>
