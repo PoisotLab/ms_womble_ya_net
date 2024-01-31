@@ -10,3 +10,4 @@
 /.luarc.json
 
 /env/
+.DS_Store
