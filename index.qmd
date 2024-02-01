@@ -43,7 +43,9 @@ jupyter: python3
 
 ## Data & Methods {#sec-data-methods}
 
-The metacommunity model developed by @Thompson2017Dispersala is a good starting point to use for this 'case study' as it allows us some flexibility with how we want to parameterise the system. The model (@eq-metacomm) itself is based on a tritrophic community ('plants', 'herbivores', and 'carnivores') and is a collection of modified Lotka–Volterra equations and (broadly) models species abundance as a function of interaction strength, environmental effect, immigration, and emigration. The metacommunity consists of $S$ species with $M$ environmental patches and looks as follows:
+### Metacommunity model
+
+The metacommunity model developed by @thompsonDispersalGovernsReorganization2017a is a good starting point to use for this 'case study' as it allows us some flexibility with how we want to parameterise the system. The model (@eq-metacomm) itself is based on a tritrophic community ('plants', 'herbivores', and 'carnivores') and is a collection of modified Lotka–Volterra equations and (broadly) models species abundance as a function of interaction strength, environmental effect, immigration, and emigration. The metacommunity consists of $S$ species with $M$ environmental patches and looks as follows:
 
 $$
 X_{ij}(t+1)=X_{ij}(t)exp\left[C_{i} + \sum_{k=1}^{S}B_{ik}X_{kj}(t)+A_{ij}(t)\right]+I_{ij}(t)-X_{ij}(t)a_{i}
@@ -89,6 +91,20 @@ Where $ai$ is the proportion of the population of species $i$ that disperses at 
 | Carnivore     | 0.1   | 0.025    |
 
 : Parameters for the normal distributions used to determine the dispersal decay ($L$) for each species depending on its trophic level. {#tbl-interaction_decay}
+
+### Generating networks
+
+More info on the baking process and the various connectivity stuff and whatnot
+
+### Spatial wombling
+
+Broadly speaking spatial wombling is an edge-detection algorithm which traverses a geographic area and defines this area in terms of the rate ($m$) and corresponding direction ($\theta$) of change. This is done by using first-order partial derivative ($\partial$) of the 'curvature' of the landscape as described by $f(x,y)$ (see @eq-womble). This essentially gives an indiaction how steep the gradient ($m$) is between neighbouring cells as well as the direction ($\theta$) of the slope. 
+
+$$
+m = \sqrt{\frac{\partial f(x,y)}{\partial x}^2 + \frac{\partial f(x,y)}{\partial y}^2}
+$${#eq-womble}
+
+The spatial wombling analyses were done using `SpatialBoundaries.jl` [@strydomSpatialBoundariesJlEdge2023]. The docuemntation provides a more detailed breakdown of the underlying methodology.
 
 ## Conclusion
 
