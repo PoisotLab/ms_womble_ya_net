@@ -210,45 +210,45 @@ Nacional (IGN). …</p>
           <thead>
             <tr>
               <th>Interacting pair</th>
-              <th>Range of uniform distribution</th>
+              <th align="center">Range of uniform distribution</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Plant-plant</td>
-              <td>-1 – 0</td>
+              <td align="center">-1 – 0</td>
             </tr>
             <tr>
               <td>Plant-herbivore</td>
-              <td>0 – 0.1</td>
+              <td align="center">0 – 0.1</td>
             </tr>
             <tr>
               <td>Plant-carnivore</td>
-              <td>0</td>
+              <td align="center">0</td>
             </tr>
             <tr>
               <td>Herbivore-plant</td>
-              <td>-0.3 – 0</td>
+              <td align="center">-0.3 – 0</td>
             </tr>
             <tr>
               <td>Herbivore-herbivore</td>
-              <td>-0.2– -0.15</td>
+              <td align="center">-0.2– -0.15</td>
             </tr>
             <tr>
               <td>Herbivore-carnivore</td>
-              <td>0 – 0.08</td>
+              <td align="center">0 – 0.08</td>
             </tr>
             <tr>
               <td>Carnivore-plant</td>
-              <td>0</td>
+              <td align="center">0</td>
             </tr>
             <tr>
               <td>Carnivore-herbivore</td>
-              <td>-0.1 – 0</td>
+              <td align="center">-0.1 – 0</td>
             </tr>
             <tr>
               <td>Carnivore-carnivore</td>
-              <td>-0.1 – 0</td>
+              <td align="center">-0.1 – 0</td>
             </tr>
           </tbody>
         </table>
@@ -363,10 +363,10 @@ Nacional (IGN). …</p>
           <thead>
             <tr>
               <th>Trophic level</th>
-              <th><inline-formula><alternatives>
+              <th align="center"><inline-formula><alternatives>
               <tex-math><![CDATA[\mu]]></tex-math>
               <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>μ</mml:mi></mml:math></alternatives></inline-formula></th>
-              <th><inline-formula><alternatives>
+              <th align="center"><inline-formula><alternatives>
               <tex-math><![CDATA[\sigma]]></tex-math>
               <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>σ</mml:mi></mml:math></alternatives></inline-formula></th>
             </tr>
@@ -374,18 +374,18 @@ Nacional (IGN). …</p>
           <tbody>
             <tr>
               <td>Plant</td>
-              <td>0.3</td>
-              <td>0.075</td>
+              <td align="center">0.3</td>
+              <td align="center">0.075</td>
             </tr>
             <tr>
               <td>Herbivore</td>
-              <td>0.2</td>
-              <td>0.05</td>
+              <td align="center">0.2</td>
+              <td align="center">0.05</td>
             </tr>
             <tr>
               <td>Carnivore</td>
-              <td>0.1</td>
-              <td>0.025</td>
+              <td align="center">0.1</td>
+              <td align="center">0.025</td>
             </tr>
           </tbody>
         </table>
