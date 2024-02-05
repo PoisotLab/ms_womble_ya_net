@@ -28,6 +28,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -216,7 +217,7 @@ window.Quarto = {
 <h2 data-number="2" class="anchored" data-anchor-id="sec-data-methods"><span class="header-section-number">2</span> Data &amp; Methods</h2>
 <section id="metacommunity-model" class="level3" data-number="2.1">
 <h3 data-number="2.1" class="anchored" data-anchor-id="metacommunity-model"><span class="header-section-number">2.1</span> Metacommunity model</h3>
-<p>The metacommunity model developed by <span class="citation" data-cites="thompsonDispersalGovernsReorganization2017a">(<a href="#ref-thompsonDispersalGovernsReorganization2017a" role="doc-biblioref"><strong>thompsonDispersalGovernsReorganization2017a?</strong></a>)</span> is a good starting point to use for this ‘case study’ as it allows us some flexibility with how we want to parameterise the system. The model (<a href="#eq-metacomm" class="quarto-xref">Equation&nbsp;1</a>) itself is based on a tritrophic community (‘plants’, ‘herbivores’, and ‘carnivores’) and is a collection of modified Lotka–Volterra equations and (broadly) models species abundance as a function of interaction strength, environmental effect, immigration, and emigration. The metacommunity consists of <span class="math inline">\(S\)</span> species with <span class="math inline">\(M\)</span> environmental patches and looks as follows:</p>
+<p>The metacommunity model developed by <span class="citation" data-cites="Thompson2017Dispersala">Thompson and Gonzalez (<a href="#ref-Thompson2017Dispersala" role="doc-biblioref">2017</a>)</span> is a good starting point to use for this ‘case study’ as it allows us some flexibility with how we want to parameterise the system. The model (<a href="#eq-metacomm" class="quarto-xref">Equation&nbsp;1</a>) itself is based on a tritrophic community (‘plants’, ‘herbivores’, and ‘carnivores’) and is a collection of modified Lotka–Volterra equations and (broadly) models species abundance as a function of interaction strength, environmental effect, immigration, and emigration. The metacommunity consists of <span class="math inline">\(S\)</span> species with <span class="math inline">\(M\)</span> environmental patches and looks as follows:</p>
 <p><span id="eq-metacomm"><span class="math display">\[
 X_{ij}(t+1)=X_{ij}(t)exp\left[C_{i} + \sum_{k=1}^{S}B_{ik}X_{kj}(t)+A_{ij}(t)\right]+I_{ij}(t)-X_{ij}(t)a_{i}
 \tag{1}\]</span></span></p>
@@ -332,7 +333,7 @@ Table&nbsp;2: Parameters for the normal distributions used to determine the disp
 <p><span id="eq-womble"><span class="math display">\[
 m = \sqrt{\frac{\partial f(x,y)}{\partial x}^2 + \frac{\partial f(x,y)}{\partial y}^2}
 \tag{4}\]</span></span></p>
-<p>The spatial wombling analyses were done using <code>SpatialBoundaries.jl</code> <span class="citation" data-cites="strydomSpatialBoundariesJlEdge2023">(<a href="#ref-strydomSpatialBoundariesJlEdge2023" role="doc-biblioref"><strong>strydomSpatialBoundariesJlEdge2023?</strong></a>)</span>. The docuemntation provides a more detailed breakdown of the underlying methodology.</p>
+<p>The spatial wombling analyses were done using <code>SpatialBoundaries.jl</code> <span class="citation" data-cites="Strydom2023Spatialboundariesa">(<a href="#ref-Strydom2023Spatialboundariesa" role="doc-biblioref">Strydom and Poisot 2023</a>)</span>. The docuemntation provides a more detailed breakdown of the underlying methodology.</p>
 </section>
 </section>
 <section id="conclusion" class="level2" data-number="3">
@@ -340,8 +341,13 @@ m = \sqrt{\frac{\partial f(x,y)}{\partial x}^2 + \frac{\partial f(x,y)}{\partial
 </section>
 <section id="references" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
-<div id="refs" role="list">
-
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Strydom2023Spatialboundariesa" class="csl-entry" role="listitem">
+Strydom, Tanya, and Timothée Poisot. 2023. <span>“<span>SpatialBoundaries</span>.jl: Edge Detection Using Spatial Wombling.”</span> <em>Ecography</em> 2023 (5): e06609. <a href="https://doi.org/10.1111/ecog.06609">https://doi.org/10.1111/ecog.06609</a>.
+</div>
+<div id="ref-Thompson2017Dispersala" class="csl-entry" role="listitem">
+Thompson, Patrick L., and Andrew Gonzalez. 2017. <span>“Dispersal Governs the Reorganization of Ecological Networks Under Environmental Change.”</span> <em>Nature Ecology &amp; Evolution</em> 1 (6). <a href="https://doi.org/10.1038/s41559-017-0162">https://doi.org/10.1038/s41559-017-0162</a>.
+</div>
 </div>
 </section>
 

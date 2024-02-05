@@ -75,6 +75,39 @@
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \usepackage{url} %this package should fix any errors with URLs in refs.
 \usepackage{lineno}
@@ -173,9 +206,8 @@ eruption is found \ldots{}
 
 \subsection{Metacommunity model}\label{metacommunity-model}
 
-The metacommunity model developed by
-(\textbf{thompsonDispersalGovernsReorganization2017a?}) is a good
-starting point to use for this `case study' as it allows us some
+The metacommunity model developed by Thompson \& Gonzalez (2017) is a
+good starting point to use for this `case study' as it allows us some
 flexibility with how we want to parameterise the system. The model
 (Equation~\ref{eq-metacomm}) itself is based on a tritrophic community
 (`plants', `herbivores', and `carnivores') and is a collection of
@@ -297,9 +329,9 @@ m = \sqrt{\frac{\partial f(x,y)}{\partial x}^2 + \frac{\partial f(x,y)}{\partial
 }\end{equation}
 
 The spatial wombling analyses were done using
-\texttt{SpatialBoundaries.jl}
-(\textbf{strydomSpatialBoundariesJlEdge2023?}). The docuemntation
-provides a more detailed breakdown of the underlying methodology.
+\texttt{SpatialBoundaries.jl} (Strydom \& Poisot, 2023). The
+docuemntation provides a more detailed breakdown of the underlying
+methodology.
 
 \section{Conclusion}\label{conclusion}
 
@@ -311,6 +343,21 @@ provides a more detailed breakdown of the underlying methodology.
 \textsubscript{Source:
 \href{https://PoisotLab.github.io/ms_womble_ya_net/index.qmd.html}{Article
 Notebook}}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-Strydom2023Spatialboundariesa}
+Strydom, T., \& Poisot, T. (2023). {SpatialBoundaries}.jl: Edge
+detection using spatial wombling. \emph{Ecography}, \emph{2023}(5),
+e06609. \url{https://doi.org/10.1111/ecog.06609}
+
+\bibitem[\citeproctext]{ref-Thompson2017Dispersala}
+Thompson, P. L., \& Gonzalez, A. (2017). Dispersal governs the
+reorganization of ecological networks under environmental change.
+\emph{Nature Ecology \& Evolution}, \emph{1}(6).
+\url{https://doi.org/10.1038/s41559-017-0162}
+
+\end{CSLReferences}
 
 
 
