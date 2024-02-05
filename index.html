@@ -199,7 +199,7 @@ window.Quarto = {
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">3</span> Conclusion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/data-screening-preview.html"><i class="bi bi-journal-code"></i>Data Screening</a></li></ul></div></nav>
+</nav>
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
@@ -238,19 +238,19 @@ Table&nbsp;1: Intervals used for the uniform distribution from which interaction
 <tbody>
 <tr class="odd">
 <td>Plant-plant</td>
-<td style="text-align: center;">-1 – 0</td>
+<td style="text-align: center;">-1.0 – 0.00</td>
 </tr>
 <tr class="even">
 <td>Plant-herbivore</td>
-<td style="text-align: center;">0 – 0.1</td>
+<td style="text-align: center;">0.0 – 0.10</td>
 </tr>
 <tr class="odd">
 <td>Plant-carnivore</td>
-<td style="text-align: center;">0</td>
+<td style="text-align: center;">0.0</td>
 </tr>
 <tr class="even">
 <td>Herbivore-plant</td>
-<td style="text-align: center;">-0.3 – 0</td>
+<td style="text-align: center;">-0.3 – 0.00</td>
 </tr>
 <tr class="odd">
 <td>Herbivore-herbivore</td>
@@ -258,19 +258,19 @@ Table&nbsp;1: Intervals used for the uniform distribution from which interaction
 </tr>
 <tr class="even">
 <td>Herbivore-carnivore</td>
-<td style="text-align: center;">0 – 0.08</td>
+<td style="text-align: center;">0.0 – 0.08</td>
 </tr>
 <tr class="odd">
 <td>Carnivore-plant</td>
-<td style="text-align: center;">0</td>
+<td style="text-align: center;">0.0</td>
 </tr>
 <tr class="even">
 <td>Carnivore-herbivore</td>
-<td style="text-align: center;">-0.1 – 0</td>
+<td style="text-align: center;">-0.1 – 0.00</td>
 </tr>
 <tr class="odd">
 <td>Carnivore-carnivore</td>
-<td style="text-align: center;">-0.1 – 0</td>
+<td style="text-align: center;">-0.1 – 0.00</td>
 </tr>
 </tbody>
 </table>
@@ -278,8 +278,11 @@ Table&nbsp;1: Intervals used for the uniform distribution from which interaction
 </figure>
 </div>
 <p><span class="math inline">\(A_{ij}(t)\)</span> is the effect of the environment in patch <span class="math inline">\(j\)</span> on species <span class="math inline">\(i\)</span> at time <span class="math inline">\(t\)</span> and can be further expanded as follows:</p>
+<p><span class="math display">\[
+\hat{A}_{ij}(t)=h\times\frac{1}{\sigma\sqrt{2\pi}}\exp-\frac{1}{2}\left(\frac{(E_{j}(t)-H_{i})^2}{\sigma}\right)^2
+\]</span></p>
 <p><span id="eq-metacomm_env"><span class="math display">\[
-A_{ij}(t)=h\left(exp-\frac{(E_{j}(t)-H_{i})^2}{2\sigma^2}-1\right)
+A_{ij}(t)= \hat{A}_{ij}(t) - max(\hat{A})
 \tag{2}\]</span></span></p>
 <p>Species environmental optima (<span class="math inline">\(H_i\)</span>) are evenly distributed across the entire range of environmental conditions for each trophic level, meaning that species from different trophic levels will be at, or near the same environmental optima. <span class="math inline">\(h\)</span> is a scaling parameter (set to 300), <span class="math inline">\(E_j(t)\)</span> is the environment in patch <span class="math inline">\(j\)</span> at time <span class="math inline">\(t\)</span> and <span class="math inline">\(\sigma\)</span> is the standard deviation (set to 50).</p>
 <p><span class="math inline">\(I_{ij}(t)\)</span> is the abundance of species <span class="math inline">\(i\)</span> immigrating to patch <span class="math inline">\(j\)</span> at time <span class="math inline">\(t\)</span> and can be expanded as follows:</p>
@@ -310,7 +313,7 @@ Table&nbsp;2: Parameters for the normal distributions used to determine the disp
 <tr class="even">
 <td>Herbivore</td>
 <td style="text-align: center;">0.2</td>
-<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">0.050</td>
 </tr>
 <tr class="odd">
 <td>Carnivore</td>
