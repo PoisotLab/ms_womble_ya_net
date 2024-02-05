@@ -55,7 +55,7 @@ Where $X_{ij}(t)$ is the abundance of species $i$ in patch $j$ at time $t$. $C_i
 
 
 | Interacting pair    | Range of uniform distribution|
-|---------------------|------------------------------|
+|---------------------|:----------------------------:|
 | Plant-plant         | -1 -- 0                      |
 | Plant-herbivore     | 0 -- 0.1                     |
 | Plant-carnivore     | 0                            |
@@ -85,7 +85,7 @@ $$ {#eq-metacomm_imm}
 Where $ai$ is the proportion of the population of species $i$ that disperses at each time step, the dispersal rate is drawn from a normal distribution ($\mu$ = 0.1, $\sigma$ = 0.025) for each species. The abundance of immigrants to patch $j$ from all other patches is governed by where $d_{jl}$ is the geographic distance between patches $j$ and $l$, and $L$ (the strength of the exponential decrease in dispersal with distance), which is also drawn from a normal distribution for each species. The parameters used for $L$ are trophic level dependant and are show in @tbl-interaction_decay
 
 | Trophic level | $\mu$ | $\sigma$ |
-|---------------|-------|----------|
+|---------------|:-----:|:--------:|
 | Plant         | 0.3   | 0.075    |
 | Herbivore     | 0.2   | 0.05     |
 | Carnivore     | 0.1   | 0.025    |
