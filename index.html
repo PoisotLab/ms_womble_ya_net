@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.6">
+<meta name="generator" content="quarto-1.5.8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Tanya Strydom">
 <meta name="author" content="Timothée Poisot">
-<meta name="dcterms.date" content="2024-01-31">
+<meta name="dcterms.date" content="2024-02-05">
 <meta name="keywords" content="wombling, spatial networks">
 
 <title>Omnomnomnivores</title>
@@ -28,7 +28,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -100,16 +99,17 @@ window.Quarto = {
 <meta name="citation_keywords" content="wombling,spatial networks">
 <meta name="citation_author" content="Tanya Strydom">
 <meta name="citation_author" content="Timothée Poisot">
-<meta name="citation_publication_date" content="2024-01-31">
-<meta name="citation_cover_date" content="2024-01-31">
+<meta name="citation_publication_date" content="2024-02-05">
+<meta name="citation_cover_date" content="2024-02-05">
 <meta name="citation_year" content="2024">
-<meta name="citation_online_date" content="2024-01-31">
+<meta name="citation_online_date" content="2024-02-05">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="Earth and Space Science">
 <meta name="citation_reference" content="citation_title=Delineation of Ecological Boundaries: Comparison of Approaches and Significance Tests;,citation_author=Marie-Josée Fortin;,citation_author=Pierre Drapeau;,citation_publication_date=1995;,citation_cover_date=1995;,citation_year=1995;,citation_fulltext_html_url=https://www.jstor.org/stable/3546117;,citation_issue=3;,citation_doi=10.2307/3546117;,citation_issn=0030-1299;,citation_volume=72;,citation_journal_title=Oikos;,citation_publisher=[Nordic Society Oikos, Wiley];">
 <meta name="citation_reference" content="citation_title=Quantification of the Spatial Co-Occurrences of Ecological Boundaries;,citation_author=Marie-Josée Fortin;,citation_author=Pierre Drapeau;,citation_author=Geoffrey M. Jacquez;,citation_publication_date=1996;,citation_cover_date=1996;,citation_year=1996;,citation_fulltext_html_url=https://www.jstor.org/stable/3545584;,citation_issue=1;,citation_doi=10.2307/3545584;,citation_issn=0030-1299;,citation_volume=77;,citation_journal_title=Oikos;,citation_publisher=[Nordic Society Oikos, Wiley];">
 <meta name="citation_reference" content="citation_title=Network ecology in dynamic landscapes;,citation_author=Marie-Josée Fortin;,citation_author=Mark R. T. Dale;,citation_author=Chris Brimacombe;,citation_publication_date=2021-04-28;,citation_cover_date=2021-04-28;,citation_year=2021;,citation_issue=1949;,citation_doi=10.1098/rspb.2020.1889;,citation_issn=0962-8452, 1471-2954;,citation_volume=288;,citation_language=en-US;,citation_journal_title=Proceedings of the Royal Society B: Biological Sciences;,citation_journal_abbrev=Proc. R. Soc. B.;">
 <meta name="citation_reference" content="citation_title=Temperature and trophic structure are driving microbial productivity along a biogeographical gradient;,citation_author=Sarah M. Gray;,citation_author=Timothée Poisot;,citation_author=Eric Harvey;,citation_author=Nicolas Mouquet;,citation_author=Thomas E. Miller;,citation_author=Dominique Gravel;,citation_publication_date=2016;,citation_cover_date=2016;,citation_year=2016;,citation_issue=10;,citation_doi=10.1111/ecog.01748;,citation_issn=1600-0587;,citation_volume=39;,citation_language=en-US;,citation_journal_title=Ecography;">
+<meta name="citation_reference" content="citation_title=SpatialBoundaries.jl: Edge detection using spatial wombling;,citation_author=Tanya Strydom;,citation_author=Timothée Poisot;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_issue=5;,citation_doi=10.1111/ecog.06609;,citation_issn=1600-0587;,citation_volume=2023;,citation_language=en-US;,citation_journal_title=Ecography;">
 <meta name="citation_reference" content="citation_title=Dispersal governs the reorganization of ecological networks under environmental change;,citation_author=Patrick L. Thompson;,citation_author=Andrew Gonzalez;,citation_publication_date=2017-06;,citation_cover_date=2017-06;,citation_year=2017;,citation_issue=6;,citation_doi=10.1038/s41559-017-0162;,citation_volume=1;,citation_language=en-US;,citation_journal_title=Nature Ecology &amp;amp;amp; Evolution;,citation_publisher=Nature Publishing Group;">
 </head>
 
@@ -155,7 +155,7 @@ window.Quarto = {
                 <div>
             <div class="quarto-title-meta-heading">Published</div>
             <div class="quarto-title-meta-contents">
-              <p class="date">January 31, 2024</p>
+              <p class="date">February 5, 2024</p>
             </div>
           </div>
           
@@ -189,7 +189,12 @@ window.Quarto = {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#sec-data-methods" id="toc-sec-data-methods" class="nav-link" data-scroll-target="#sec-data-methods"><span class="header-section-number">2</span> Data &amp; Methods</a></li>
+  <li><a href="#sec-data-methods" id="toc-sec-data-methods" class="nav-link" data-scroll-target="#sec-data-methods"><span class="header-section-number">2</span> Data &amp; Methods</a>
+  <ul class="collapse">
+  <li><a href="#metacommunity-model" id="toc-metacommunity-model" class="nav-link" data-scroll-target="#metacommunity-model"><span class="header-section-number">2.1</span> Metacommunity model</a></li>
+  <li><a href="#generating-networks" id="toc-generating-networks" class="nav-link" data-scroll-target="#generating-networks"><span class="header-section-number">2.2</span> Generating networks</a></li>
+  <li><a href="#spatial-wombling" id="toc-spatial-wombling" class="nav-link" data-scroll-target="#spatial-wombling"><span class="header-section-number">2.3</span> Spatial wombling</a></li>
+  </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">3</span> Conclusion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -209,7 +214,9 @@ window.Quarto = {
 </section>
 <section id="sec-data-methods" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="sec-data-methods"><span class="header-section-number">2</span> Data &amp; Methods</h2>
-<p>The metacommunity model developed by <span class="citation" data-cites="Thompson2017Dispersala">Thompson and Gonzalez (<a href="#ref-Thompson2017Dispersala" role="doc-biblioref">2017</a>)</span> is a good starting point to use for this ‘case study’ as it allows us some flexibility with how we want to parameterise the system. The model (<a href="#eq-metacomm" class="quarto-xref">Equation&nbsp;1</a>) itself is based on a tritrophic community (‘plants’, ‘herbivores’, and ‘carnivores’) and is a collection of modified Lotka–Volterra equations and (broadly) models species abundance as a function of interaction strength, environmental effect, immigration, and emigration. The metacommunity consists of <span class="math inline">\(S\)</span> species with <span class="math inline">\(M\)</span> environmental patches and looks as follows:</p>
+<section id="metacommunity-model" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="metacommunity-model"><span class="header-section-number">2.1</span> Metacommunity model</h3>
+<p>The metacommunity model developed by <span class="citation" data-cites="thompsonDispersalGovernsReorganization2017a">(<a href="#ref-thompsonDispersalGovernsReorganization2017a" role="doc-biblioref"><strong>thompsonDispersalGovernsReorganization2017a?</strong></a>)</span> is a good starting point to use for this ‘case study’ as it allows us some flexibility with how we want to parameterise the system. The model (<a href="#eq-metacomm" class="quarto-xref">Equation&nbsp;1</a>) itself is based on a tritrophic community (‘plants’, ‘herbivores’, and ‘carnivores’) and is a collection of modified Lotka–Volterra equations and (broadly) models species abundance as a function of interaction strength, environmental effect, immigration, and emigration. The metacommunity consists of <span class="math inline">\(S\)</span> species with <span class="math inline">\(M\)</span> environmental patches and looks as follows:</p>
 <p><span id="eq-metacomm"><span class="math display">\[
 X_{ij}(t+1)=X_{ij}(t)exp\left[C_{i} + \sum_{k=1}^{S}B_{ik}X_{kj}(t)+A_{ij}(t)\right]+I_{ij}(t)-X_{ij}(t)a_{i}
 \tag{1}\]</span></span></p>
@@ -315,22 +322,33 @@ Table&nbsp;2: Parameters for the normal distributions used to determine the disp
 </figure>
 </div>
 </section>
+<section id="generating-networks" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="generating-networks"><span class="header-section-number">2.2</span> Generating networks</h3>
+<p>More info on the baking process and the various connectivity stuff and whatnot</p>
+</section>
+<section id="spatial-wombling" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="spatial-wombling"><span class="header-section-number">2.3</span> Spatial wombling</h3>
+<p>Broadly speaking spatial wombling is an edge-detection algorithm which traverses a geographic area and defines this area in terms of the rate (<span class="math inline">\(m\)</span>) and corresponding direction (<span class="math inline">\(\theta\)</span>) of change. This is done by using first-order partial derivative (<span class="math inline">\(\partial\)</span>) of the ‘curvature’ of the landscape as described by <span class="math inline">\(f(x,y)\)</span> (see <a href="#eq-womble" class="quarto-xref">Equation&nbsp;4</a>). This essentially gives an indiaction how steep the gradient (<span class="math inline">\(m\)</span>) is between neighbouring cells as well as the direction (<span class="math inline">\(\theta\)</span>) of the slope.</p>
+<p><span id="eq-womble"><span class="math display">\[
+m = \sqrt{\frac{\partial f(x,y)}{\partial x}^2 + \frac{\partial f(x,y)}{\partial y}^2}
+\tag{4}\]</span></span></p>
+<p>The spatial wombling analyses were done using <code>SpatialBoundaries.jl</code> <span class="citation" data-cites="strydomSpatialBoundariesJlEdge2023">(<a href="#ref-strydomSpatialBoundariesJlEdge2023" role="doc-biblioref"><strong>strydomSpatialBoundariesJlEdge2023?</strong></a>)</span>. The docuemntation provides a more detailed breakdown of the underlying methodology.</p>
+</section>
+</section>
 <section id="conclusion" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">3</span> Conclusion</h2>
 </section>
 <section id="references" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-Thompson2017Dispersala" class="csl-entry" role="listitem">
-Thompson, Patrick L., and Andrew Gonzalez. 2017. <span>“Dispersal Governs the Reorganization of Ecological Networks Under Environmental Change.”</span> <em>Nature Ecology &amp; Evolution</em> 1 (6). <a href="https://doi.org/10.1038/s41559-017-0162">https://doi.org/10.1038/s41559-017-0162</a>.
-</div>
+<div id="refs" role="list">
+
 </div>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{strydom2024,
   author = {Strydom, Tanya and Poisot, Timothée},
   title = {Omnomnomnivores},
-  date = {2024-01-31},
+  date = {2024-02-05},
   langid = {en},
   abstract = {In September 2021, a significant jump in seismic activity
     on the island of La Palma (Canary Islands, Spain) signaled the start
@@ -340,7 +358,7 @@ Thompson, Patrick L., and Andrew Gonzalez. 2017. <span>“Dispersal Governs the 
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-strydom2024" class="csl-entry quarto-appendix-citeas" role="listitem">
 Strydom, Tanya, and Timothée Poisot. 2024.
-<span>“Omnomnomnivores.”</span> Earth and Space Science. January 31,
+<span>“Omnomnomnivores.”</span> Earth and Space Science. February 5,
 2024.
 </div></div></section></div></main>
 <!-- /main column -->

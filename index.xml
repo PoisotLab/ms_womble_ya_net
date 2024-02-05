@@ -98,10 +98,10 @@ administration</role>
 <corresp id="cor-2">timothee.poisot@umontreal.ca</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-01-31">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-05">
 <year>2024</year>
-<month>1</month>
-<day>31</day>
+<month>2</month>
+<day>5</day>
 </pub-date>
 
 
@@ -138,281 +138,314 @@ Nacional (IGN). …</p>
 </sec>
 <sec id="sec-data-methods">
   <title>2 Data &amp; Methods</title>
-  <p>The metacommunity model developed by Thompson and Gonzalez
-  (<xref alt="2017" rid="ref-Thompson2017Dispersala" ref-type="bibr">2017</xref>)
-  is a good starting point to use for this ‘case study’ as it allows us
-  some flexibility with how we want to parameterise the system. The
-  model (<xref alt="Equation 1" rid="eq-metacomm">Equation 1</xref>)
-  itself is based on a tritrophic community (‘plants’, ‘herbivores’, and
-  ‘carnivores’) and is a collection of modified Lotka–Volterra equations
-  and (broadly) models species abundance as a function of interaction
-  strength, environmental effect, immigration, and emigration. The
-  metacommunity consists of <inline-formula><alternatives>
-  <tex-math><![CDATA[S]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>S</mml:mi></mml:math></alternatives></inline-formula>
-  species with <inline-formula><alternatives>
-  <tex-math><![CDATA[M]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>M</mml:mi></mml:math></alternatives></inline-formula>
-  environmental patches and looks as follows:</p>
-  <p><styled-content id="eq-metacomm"><disp-formula><alternatives>
-  <tex-math><![CDATA[
-  X_{ij}(t+1)=X_{ij}(t)exp\left[C_{i} + \sum_{k=1}^{S}B_{ik}X_{kj}(t)+A_{ij}(t)\right]+I_{ij}(t)-X_{ij}(t)a_{i}
-   \qquad(1)]]></tex-math>
-  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mi>e</mml:mi><mml:mi>x</mml:mi><mml:mi>p</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>S</mml:mi></mml:munderover><mml:msub><mml:mi>B</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:msub><mml:mi>A</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:msub><mml:mi>I</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:msub><mml:mi>a</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
-  <p>Where <inline-formula><alternatives>
-  <tex-math><![CDATA[X_{ij}(t)]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
-  is the abundance of species <inline-formula><alternatives>
-  <tex-math><![CDATA[i]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>
-  in patch <inline-formula><alternatives>
-  <tex-math><![CDATA[j]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
-  at time <inline-formula><alternatives>
-  <tex-math><![CDATA[t]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>.
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[C_i]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
-  is its intrinsic rate of increase (which we have set to 0.1 for
-  ‘plants’ and -0.01 for ‘herbivores’ and ‘carnivores’).
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[B_{ik}]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>B</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub></mml:math></alternatives></inline-formula>
-  is the per capita effect of species <inline-formula><alternatives>
-  <tex-math><![CDATA[k]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>k</mml:mi></mml:math></alternatives></inline-formula>
-  on species <inline-formula><alternatives>
-  <tex-math><![CDATA[i]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>.
-  The exact interaction strength for each species pair is drawn from a
-  uniform distribution with the parameters for the interaction pairs
-  listed in
-  <xref alt="Table 1" rid="tbl-interaction_strength">Table 1</xref>, the
-  values drawn from the uniform distribution are scaled by dividing by
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[0.33S]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mn>0.33</mml:mn><mml:mi>S</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
-  to yield the final interaction strength for each interacting pair.</p>
-  <fig id="tbl-interaction_strength">
-    <caption><p>Table 1: Intervals used for the uniform distribution
-    from which interaction strengths values are drawn from for the
-    different types of species pair interactions. Note this is represent
-    the effect of species type 1 on species type 2
-    <italic>i.e.,</italic> herbivore-plant represents the effect of a
-    herbivore species on a plant species</p></caption>
-    <table-wrap>
-      <table>
-        <thead>
-          <tr>
-            <th>Interacting pair</th>
-            <th>Range of uniform distribution</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Plant-plant</td>
-            <td>-1 – 0</td>
-          </tr>
-          <tr>
-            <td>Plant-herbivore</td>
-            <td>0 – 0.1</td>
-          </tr>
-          <tr>
-            <td>Plant-carnivore</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>Herbivore-plant</td>
-            <td>-0.3 – 0</td>
-          </tr>
-          <tr>
-            <td>Herbivore-herbivore</td>
-            <td>-0.2– -0.15</td>
-          </tr>
-          <tr>
-            <td>Herbivore-carnivore</td>
-            <td>0 – 0.08</td>
-          </tr>
-          <tr>
-            <td>Carnivore-plant</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>Carnivore-herbivore</td>
-            <td>-0.1 – 0</td>
-          </tr>
-          <tr>
-            <td>Carnivore-carnivore</td>
-            <td>-0.1 – 0</td>
-          </tr>
-        </tbody>
-      </table>
-    </table-wrap>
-  </fig>
-  <p><inline-formula><alternatives>
-  <tex-math><![CDATA[A_{ij}(t)]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>A</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
-  is the effect of the environment in patch
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[j]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
-  on species <inline-formula><alternatives>
-  <tex-math><![CDATA[i]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>
-  at time <inline-formula><alternatives>
-  <tex-math><![CDATA[t]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
-  and can be further expanded as follows:</p>
-  <p><styled-content id="eq-metacomm_env"><disp-formula><alternatives>
-  <tex-math><![CDATA[
-  A_{ij}(t)=h\left(exp-\frac{(E_{j}(t)-H_{i})^2}{2\sigma^2}-1\right)
-   \qquad(2)]]></tex-math>
-  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>A</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mi>h</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>e</mml:mi><mml:mi>x</mml:mi><mml:mi>p</mml:mi><mml:mo>−</mml:mo><mml:mfrac><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>E</mml:mi><mml:mi>j</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mi>H</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mrow><mml:mn>2</mml:mn><mml:msup><mml:mi>σ</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:mfrac><mml:mo>−</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
-  <p>Species environmental optima (<inline-formula><alternatives>
-  <tex-math><![CDATA[H_i]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>H</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula>)
-  are evenly distributed across the entire range of environmental
-  conditions for each trophic level, meaning that species from different
-  trophic levels will be at, or near the same environmental optima.
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[h]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>h</mml:mi></mml:math></alternatives></inline-formula>
-  is a scaling parameter (set to 300), <inline-formula><alternatives>
-  <tex-math><![CDATA[E_j(t)]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>E</mml:mi><mml:mi>j</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
-  is the environment in patch <inline-formula><alternatives>
-  <tex-math><![CDATA[j]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
-  at time <inline-formula><alternatives>
-  <tex-math><![CDATA[t]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
-  and <inline-formula><alternatives>
-  <tex-math><![CDATA[\sigma]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>σ</mml:mi></mml:math></alternatives></inline-formula>
-  is the standard deviation (set to 50).</p>
-  <p><inline-formula><alternatives>
-  <tex-math><![CDATA[I_{ij}(t)]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>I</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
-  is the abundance of species <inline-formula><alternatives>
-  <tex-math><![CDATA[i]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>
-  immigrating to patch <inline-formula><alternatives>
-  <tex-math><![CDATA[j]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
-  at time <inline-formula><alternatives>
-  <tex-math><![CDATA[t]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
-  and can be expanded as follows:</p>
-  <p><styled-content id="eq-metacomm_imm"><disp-formula><alternatives>
-  <tex-math><![CDATA[
-  I_{ij}(t)=\sum_{l=j}^{M}a_iX_{il}(t)exp(-Ld_{jl})
-   \qquad(3)]]></tex-math>
-  <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>I</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>l</mml:mi><mml:mo>=</mml:mo><mml:mi>j</mml:mi></mml:mrow><mml:mi>M</mml:mi></mml:munderover><mml:msub><mml:mi>a</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>l</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mi>e</mml:mi><mml:mi>x</mml:mi><mml:mi>p</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mo>−</mml:mo><mml:mi>L</mml:mi><mml:msub><mml:mi>d</mml:mi><mml:mrow><mml:mi>j</mml:mi><mml:mi>l</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>3</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
-  <p>Where <inline-formula><alternatives>
-  <tex-math><![CDATA[ai]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>a</mml:mi><mml:mi>i</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
-  is the proportion of the population of species
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[i]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>
-  that disperses at each time step, the dispersal rate is drawn from a
-  normal distribution (<inline-formula><alternatives>
-  <tex-math><![CDATA[\mu]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>μ</mml:mi></mml:math></alternatives></inline-formula>
-  = 0.1, <inline-formula><alternatives>
-  <tex-math><![CDATA[\sigma]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>σ</mml:mi></mml:math></alternatives></inline-formula>
-  = 0.025) for each species. The abundance of immigrants to patch
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[j]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
-  from all other patches is governed by where
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[d_{jl}]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>d</mml:mi><mml:mrow><mml:mi>j</mml:mi><mml:mi>l</mml:mi></mml:mrow></mml:msub></mml:math></alternatives></inline-formula>
-  is the geographic distance between patches
-  <inline-formula><alternatives>
-  <tex-math><![CDATA[j]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
-  and <inline-formula><alternatives>
-  <tex-math><![CDATA[l]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>l</mml:mi></mml:math></alternatives></inline-formula>,
-  and <inline-formula><alternatives>
-  <tex-math><![CDATA[L]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>L</mml:mi></mml:math></alternatives></inline-formula>
-  (the strength of the exponential decrease in dispersal with distance),
-  which is also drawn from a normal distribution for each species. The
-  parameters used for <inline-formula><alternatives>
-  <tex-math><![CDATA[L]]></tex-math>
-  <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>L</mml:mi></mml:math></alternatives></inline-formula>
-  are trophic level dependant and are show in
-  <xref alt="Table 2" rid="tbl-interaction_decay">Table 2</xref></p>
-  <fig id="tbl-interaction_decay">
-    <caption><p>Table 2: Parameters for the normal distributions used to
-    determine the dispersal decay (<inline-formula><alternatives>
+  <sec id="metacommunity-model">
+    <title>2.1 Metacommunity model</title>
+    <p>The metacommunity model developed by
+    (<xref alt="thompsonDispersalGovernsReorganization2017a?" rid="ref-thompsonDispersalGovernsReorganization2017a" ref-type="bibr"><bold>thompsonDispersalGovernsReorganization2017a?</bold></xref>)
+    is a good starting point to use for this ‘case study’ as it allows
+    us some flexibility with how we want to parameterise the system. The
+    model (<xref alt="Equation 1" rid="eq-metacomm">Equation 1</xref>)
+    itself is based on a tritrophic community (‘plants’, ‘herbivores’,
+    and ‘carnivores’) and is a collection of modified Lotka–Volterra
+    equations and (broadly) models species abundance as a function of
+    interaction strength, environmental effect, immigration, and
+    emigration. The metacommunity consists of
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[S]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>S</mml:mi></mml:math></alternatives></inline-formula>
+    species with <inline-formula><alternatives>
+    <tex-math><![CDATA[M]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>M</mml:mi></mml:math></alternatives></inline-formula>
+    environmental patches and looks as follows:</p>
+    <p><styled-content id="eq-metacomm"><disp-formula><alternatives>
+    <tex-math><![CDATA[
+    X_{ij}(t+1)=X_{ij}(t)exp\left[C_{i} + \sum_{k=1}^{S}B_{ik}X_{kj}(t)+A_{ij}(t)\right]+I_{ij}(t)-X_{ij}(t)a_{i}
+     \qquad(1)]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo>+</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mi>e</mml:mi><mml:mi>x</mml:mi><mml:mi>p</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">[</mml:mo><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>S</mml:mi></mml:munderover><mml:msub><mml:mi>B</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>k</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:msub><mml:mi>A</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo stretchy="true" form="postfix">]</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:msub><mml:mi>I</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:msub><mml:mi>a</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
+    <p>Where <inline-formula><alternatives>
+    <tex-math><![CDATA[X_{ij}(t)]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
+    is the abundance of species <inline-formula><alternatives>
+    <tex-math><![CDATA[i]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>
+    in patch <inline-formula><alternatives>
+    <tex-math><![CDATA[j]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
+    at time <inline-formula><alternatives>
+    <tex-math><![CDATA[t]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>.
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[C_i]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>C</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula>
+    is its intrinsic rate of increase (which we have set to 0.1 for
+    ‘plants’ and -0.01 for ‘herbivores’ and ‘carnivores’).
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[B_{ik}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>B</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>k</mml:mi></mml:mrow></mml:msub></mml:math></alternatives></inline-formula>
+    is the per capita effect of species <inline-formula><alternatives>
+    <tex-math><![CDATA[k]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>k</mml:mi></mml:math></alternatives></inline-formula>
+    on species <inline-formula><alternatives>
+    <tex-math><![CDATA[i]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>.
+    The exact interaction strength for each species pair is drawn from a
+    uniform distribution with the parameters for the interaction pairs
+    listed in
+    <xref alt="Table 1" rid="tbl-interaction_strength">Table 1</xref>,
+    the values drawn from the uniform distribution are scaled by
+    dividing by <inline-formula><alternatives>
+    <tex-math><![CDATA[0.33S]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mn>0.33</mml:mn><mml:mi>S</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
+    to yield the final interaction strength for each interacting
+    pair.</p>
+    <fig id="tbl-interaction_strength">
+      <caption><p>Table 1: Intervals used for the uniform distribution
+      from which interaction strengths values are drawn from for the
+      different types of species pair interactions. Note this is
+      represent the effect of species type 1 on species type 2
+      <italic>i.e.,</italic> herbivore-plant represents the effect of a
+      herbivore species on a plant species</p></caption>
+      <table-wrap>
+        <table>
+          <thead>
+            <tr>
+              <th>Interacting pair</th>
+              <th>Range of uniform distribution</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Plant-plant</td>
+              <td>-1 – 0</td>
+            </tr>
+            <tr>
+              <td>Plant-herbivore</td>
+              <td>0 – 0.1</td>
+            </tr>
+            <tr>
+              <td>Plant-carnivore</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Herbivore-plant</td>
+              <td>-0.3 – 0</td>
+            </tr>
+            <tr>
+              <td>Herbivore-herbivore</td>
+              <td>-0.2– -0.15</td>
+            </tr>
+            <tr>
+              <td>Herbivore-carnivore</td>
+              <td>0 – 0.08</td>
+            </tr>
+            <tr>
+              <td>Carnivore-plant</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Carnivore-herbivore</td>
+              <td>-0.1 – 0</td>
+            </tr>
+            <tr>
+              <td>Carnivore-carnivore</td>
+              <td>-0.1 – 0</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+    </fig>
+    <p><inline-formula><alternatives>
+    <tex-math><![CDATA[A_{ij}(t)]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>A</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
+    is the effect of the environment in patch
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[j]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
+    on species <inline-formula><alternatives>
+    <tex-math><![CDATA[i]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>
+    at time <inline-formula><alternatives>
+    <tex-math><![CDATA[t]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
+    and can be further expanded as follows:</p>
+    <p><styled-content id="eq-metacomm_env"><disp-formula><alternatives>
+    <tex-math><![CDATA[
+    A_{ij}(t)=h\left(exp-\frac{(E_{j}(t)-H_{i})^2}{2\sigma^2}-1\right)
+     \qquad(2)]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>A</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mi>h</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>e</mml:mi><mml:mi>x</mml:mi><mml:mi>p</mml:mi><mml:mo>−</mml:mo><mml:mfrac><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>E</mml:mi><mml:mi>j</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mi>H</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mrow><mml:mn>2</mml:mn><mml:msup><mml:mi>σ</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:mfrac><mml:mo>−</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>2</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
+    <p>Species environmental optima (<inline-formula><alternatives>
+    <tex-math><![CDATA[H_i]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>H</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></alternatives></inline-formula>)
+    are evenly distributed across the entire range of environmental
+    conditions for each trophic level, meaning that species from
+    different trophic levels will be at, or near the same environmental
+    optima. <inline-formula><alternatives>
+    <tex-math><![CDATA[h]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>h</mml:mi></mml:math></alternatives></inline-formula>
+    is a scaling parameter (set to 300), <inline-formula><alternatives>
+    <tex-math><![CDATA[E_j(t)]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>E</mml:mi><mml:mi>j</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
+    is the environment in patch <inline-formula><alternatives>
+    <tex-math><![CDATA[j]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
+    at time <inline-formula><alternatives>
+    <tex-math><![CDATA[t]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[\sigma]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>σ</mml:mi></mml:math></alternatives></inline-formula>
+    is the standard deviation (set to 50).</p>
+    <p><inline-formula><alternatives>
+    <tex-math><![CDATA[I_{ij}(t)]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>I</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
+    is the abundance of species <inline-formula><alternatives>
+    <tex-math><![CDATA[i]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>
+    immigrating to patch <inline-formula><alternatives>
+    <tex-math><![CDATA[j]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
+    at time <inline-formula><alternatives>
+    <tex-math><![CDATA[t]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
+    and can be expanded as follows:</p>
+    <p><styled-content id="eq-metacomm_imm"><disp-formula><alternatives>
+    <tex-math><![CDATA[
+    I_{ij}(t)=\sum_{l=j}^{M}a_iX_{il}(t)exp(-Ld_{jl})
+     \qquad(3)]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mi>I</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:munderover><mml:mo>∑</mml:mo><mml:mrow><mml:mi>l</mml:mi><mml:mo>=</mml:mo><mml:mi>j</mml:mi></mml:mrow><mml:mi>M</mml:mi></mml:munderover><mml:msub><mml:mi>a</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:msub><mml:mi>X</mml:mi><mml:mrow><mml:mi>i</mml:mi><mml:mi>l</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mi>e</mml:mi><mml:mi>x</mml:mi><mml:mi>p</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mo>−</mml:mo><mml:mi>L</mml:mi><mml:msub><mml:mi>d</mml:mi><mml:mrow><mml:mi>j</mml:mi><mml:mi>l</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>3</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
+    <p>Where <inline-formula><alternatives>
+    <tex-math><![CDATA[ai]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>a</mml:mi><mml:mi>i</mml:mi></mml:mrow></mml:math></alternatives></inline-formula>
+    is the proportion of the population of species
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[i]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>i</mml:mi></mml:math></alternatives></inline-formula>
+    that disperses at each time step, the dispersal rate is drawn from a
+    normal distribution (<inline-formula><alternatives>
+    <tex-math><![CDATA[\mu]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>μ</mml:mi></mml:math></alternatives></inline-formula>
+    = 0.1, <inline-formula><alternatives>
+    <tex-math><![CDATA[\sigma]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>σ</mml:mi></mml:math></alternatives></inline-formula>
+    = 0.025) for each species. The abundance of immigrants to patch
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[j]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
+    from all other patches is governed by where
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[d_{jl}]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msub><mml:mi>d</mml:mi><mml:mrow><mml:mi>j</mml:mi><mml:mi>l</mml:mi></mml:mrow></mml:msub></mml:math></alternatives></inline-formula>
+    is the geographic distance between patches
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[j]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>j</mml:mi></mml:math></alternatives></inline-formula>
+    and <inline-formula><alternatives>
+    <tex-math><![CDATA[l]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>l</mml:mi></mml:math></alternatives></inline-formula>,
+    and <inline-formula><alternatives>
     <tex-math><![CDATA[L]]></tex-math>
-    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>L</mml:mi></mml:math></alternatives></inline-formula>)
-    for each species depending on its trophic level.</p></caption>
-    <table-wrap>
-      <table>
-        <thead>
-          <tr>
-            <th>Trophic level</th>
-            <th><inline-formula><alternatives>
-            <tex-math><![CDATA[\mu]]></tex-math>
-            <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>μ</mml:mi></mml:math></alternatives></inline-formula></th>
-            <th><inline-formula><alternatives>
-            <tex-math><![CDATA[\sigma]]></tex-math>
-            <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>σ</mml:mi></mml:math></alternatives></inline-formula></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Plant</td>
-            <td>0.3</td>
-            <td>0.075</td>
-          </tr>
-          <tr>
-            <td>Herbivore</td>
-            <td>0.2</td>
-            <td>0.05</td>
-          </tr>
-          <tr>
-            <td>Carnivore</td>
-            <td>0.1</td>
-            <td>0.025</td>
-          </tr>
-        </tbody>
-      </table>
-    </table-wrap>
-  </fig>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>L</mml:mi></mml:math></alternatives></inline-formula>
+    (the strength of the exponential decrease in dispersal with
+    distance), which is also drawn from a normal distribution for each
+    species. The parameters used for <inline-formula><alternatives>
+    <tex-math><![CDATA[L]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>L</mml:mi></mml:math></alternatives></inline-formula>
+    are trophic level dependant and are show in
+    <xref alt="Table 2" rid="tbl-interaction_decay">Table 2</xref></p>
+    <fig id="tbl-interaction_decay">
+      <caption><p>Table 2: Parameters for the normal distributions used
+      to determine the dispersal decay (<inline-formula><alternatives>
+      <tex-math><![CDATA[L]]></tex-math>
+      <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>L</mml:mi></mml:math></alternatives></inline-formula>)
+      for each species depending on its trophic level.</p></caption>
+      <table-wrap>
+        <table>
+          <thead>
+            <tr>
+              <th>Trophic level</th>
+              <th><inline-formula><alternatives>
+              <tex-math><![CDATA[\mu]]></tex-math>
+              <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>μ</mml:mi></mml:math></alternatives></inline-formula></th>
+              <th><inline-formula><alternatives>
+              <tex-math><![CDATA[\sigma]]></tex-math>
+              <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>σ</mml:mi></mml:math></alternatives></inline-formula></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Plant</td>
+              <td>0.3</td>
+              <td>0.075</td>
+            </tr>
+            <tr>
+              <td>Herbivore</td>
+              <td>0.2</td>
+              <td>0.05</td>
+            </tr>
+            <tr>
+              <td>Carnivore</td>
+              <td>0.1</td>
+              <td>0.025</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+    </fig>
+  </sec>
+  <sec id="generating-networks">
+    <title>2.2 Generating networks</title>
+    <p>More info on the baking process and the various connectivity
+    stuff and whatnot</p>
+  </sec>
+  <sec id="spatial-wombling">
+    <title>2.3 Spatial wombling</title>
+    <p>Broadly speaking spatial wombling is an edge-detection algorithm
+    which traverses a geographic area and defines this area in terms of
+    the rate (<inline-formula><alternatives>
+    <tex-math><![CDATA[m]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>m</mml:mi></mml:math></alternatives></inline-formula>)
+    and corresponding direction (<inline-formula><alternatives>
+    <tex-math><![CDATA[\theta]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>θ</mml:mi></mml:math></alternatives></inline-formula>)
+    of change. This is done by using first-order partial derivative
+    (<inline-formula><alternatives>
+    <tex-math><![CDATA[\partial]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>∂</mml:mi></mml:math></alternatives></inline-formula>)
+    of the ‘curvature’ of the landscape as described by
+    <inline-formula><alternatives>
+    <tex-math><![CDATA[f(x,y)]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>f</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></inline-formula>
+    (see <xref alt="Equation 4" rid="eq-womble">Equation 4</xref>). This
+    essentially gives an indiaction how steep the gradient
+    (<inline-formula><alternatives>
+    <tex-math><![CDATA[m]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>m</mml:mi></mml:math></alternatives></inline-formula>)
+    is between neighbouring cells as well as the direction
+    (<inline-formula><alternatives>
+    <tex-math><![CDATA[\theta]]></tex-math>
+    <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>θ</mml:mi></mml:math></alternatives></inline-formula>)
+    of the slope.</p>
+    <p><styled-content id="eq-womble"><disp-formula><alternatives>
+    <tex-math><![CDATA[
+    m = \sqrt{\frac{\partial f(x,y)}{\partial x}^2 + \frac{\partial f(x,y)}{\partial y}^2}
+     \qquad(4)]]></tex-math>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>m</mml:mi><mml:mo>=</mml:mo><mml:msqrt><mml:mrow><mml:msup><mml:mfrac><mml:mrow><mml:mi>∂</mml:mi><mml:mi>f</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mi>∂</mml:mi><mml:mi>x</mml:mi></mml:mrow></mml:mfrac><mml:mn>2</mml:mn></mml:msup><mml:mo>+</mml:mo><mml:msup><mml:mfrac><mml:mrow><mml:mi>∂</mml:mi><mml:mi>f</mml:mi><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mi>∂</mml:mi><mml:mi>y</mml:mi></mml:mrow></mml:mfrac><mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:msqrt><mml:mspace width="2.0em"></mml:mspace><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mn>4</mml:mn><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
+    <p>The spatial wombling analyses were done using
+    <monospace>SpatialBoundaries.jl</monospace>
+    (<xref alt="strydomSpatialBoundariesJlEdge2023?" rid="ref-strydomSpatialBoundariesJlEdge2023" ref-type="bibr"><bold>strydomSpatialBoundariesJlEdge2023?</bold></xref>).
+    The docuemntation provides a more detailed breakdown of the
+    underlying methodology.</p>
+  </sec>
 </sec>
 <sec id="conclusion">
   <title>3 Conclusion</title>
 </sec>
+<sec id="references">
+  <title>References</title>
+</sec>
 </body>
 
 <back>
-<ref-list>
-  <title>References</title>
-  <ref id="ref-Thompson2017Dispersala">
-    <element-citation publication-type="article-journal">
-      <person-group person-group-type="author">
-        <name><surname>Thompson</surname><given-names>Patrick L.</given-names></name>
-        <name><surname>Gonzalez</surname><given-names>Andrew</given-names></name>
-      </person-group>
-      <article-title>Dispersal governs the reorganization of ecological networks under environmental change</article-title>
-      <source>Nature Ecology &amp; Evolution</source>
-      <publisher-name>Nature Publishing Group</publisher-name>
-      <publisher-loc>London, United States</publisher-loc>
-      <year iso-8601-date="2017-06">2017</year><month>06</month>
-      <volume>1</volume>
-      <issue>6</issue>
-      <pub-id pub-id-type="doi">10.1038/s41559-017-0162</pub-id>
-    </element-citation>
-  </ref>
-</ref-list>
 </back>
 
 <sub-article article-type="notebook" id="nb-4-nb-1">
