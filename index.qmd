@@ -56,22 +56,26 @@ Where $X_{ij}(t)$ is the abundance of species $i$ in patch $j$ at time $t$. $C_i
 
 | Interacting pair    | Range of uniform distribution|
 |---------------------|:----------------------------:|
-| Plant-plant         | -1 -- 0                      |
-| Plant-herbivore     | 0 -- 0.1                     |
-| Plant-carnivore     | 0                            |
-| Herbivore-plant     | -0.3 -- 0                    |
+| Plant-plant         | -1.0 -- 0.00                 |
+| Plant-herbivore     |  0.0 -- 0.10                 |
+| Plant-carnivore     | 0.0                          |
+| Herbivore-plant     | -0.3 -- 0.00                 |
 | Herbivore-herbivore | -0.2-- -0.15                 |
-| Herbivore-carnivore | 0 -- 0.08                    |
-| Carnivore-plant     | 0                            |
-| Carnivore-herbivore | -0.1 -- 0                    |
-| Carnivore-carnivore | -0.1 -- 0                    |
+| Herbivore-carnivore |  0.0 -- 0.08                 |
+| Carnivore-plant     | 0.0                          |
+| Carnivore-herbivore | -0.1 -- 0.00                 |
+| Carnivore-carnivore | -0.1 -- 0.00                 |
 
 : Intervals used for the uniform distribution from which interaction strengths values are drawn from for the different types of species pair interactions. Note this is represent the effect of species type 1 on species type 2 *i.e.,* herbivore-plant represents the effect of a herbivore species on a plant species {#tbl-interaction_strength}
 
 $A_{ij}(t)$ is the effect of the environment in patch $j$ on species $i$ at time $t$ and can be further expanded as follows:  
 
 $$
-A_{ij}(t)=h\left(exp-\frac{(E_{j}(t)-H_{i})^2}{2\sigma^2}-1\right)
+\hat{A}_{ij}(t)=h\times\frac{1}{\sigma\sqrt{2\pi}}\exp-\frac{1}{2}\left(\frac{(E_{j}(t)-H_{i})^2}{\sigma}\right)^2
+$$
+
+$$
+A_{ij}(t)= \hat{A}_{ij}(t) - max(\hat{A})
 $$ {#eq-metacomm_env}
 
 Species environmental optima ($H_i$) are evenly distributed across the entire range of environmental conditions for each trophic level, meaning that species from different trophic levels will be at, or near the same environmental optima. $h$ is a scaling parameter (set to 300), $E_j(t)$ is the environment in patch $j$ at time $t$ and $\sigma$ is the standard deviation (set to 50).
@@ -87,7 +91,7 @@ Where $ai$ is the proportion of the population of species $i$ that disperses at 
 | Trophic level | $\mu$ | $\sigma$ |
 |---------------|:-----:|:--------:|
 | Plant         | 0.3   | 0.075    |
-| Herbivore     | 0.2   | 0.05     |
+| Herbivore     | 0.2   | 0.050     |
 | Carnivore     | 0.1   | 0.025    |
 
 : Parameters for the normal distributions used to determine the dispersal decay ($L$) for each species depending on its trophic level. {#tbl-interaction_decay}
