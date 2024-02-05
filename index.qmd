@@ -45,7 +45,7 @@ jupyter: python3
 
 ### Metacommunity model
 
-The metacommunity model developed by @thompsonDispersalGovernsReorganization2017a is a good starting point to use for this 'case study' as it allows us some flexibility with how we want to parameterise the system. The model (@eq-metacomm) itself is based on a tritrophic community ('plants', 'herbivores', and 'carnivores') and is a collection of modified Lotka–Volterra equations and (broadly) models species abundance as a function of interaction strength, environmental effect, immigration, and emigration. The metacommunity consists of $S$ species with $M$ environmental patches and looks as follows:
+The metacommunity model developed by @Thompson2017Dispersala is a good starting point to use for this 'case study' as it allows us some flexibility with how we want to parameterise the system. The model (@eq-metacomm) itself is based on a tritrophic community ('plants', 'herbivores', and 'carnivores') and is a collection of modified Lotka–Volterra equations and (broadly) models species abundance as a function of interaction strength, environmental effect, immigration, and emigration. The metacommunity consists of $S$ species with $M$ environmental patches and looks as follows:
 
 $$
 X_{ij}(t+1)=X_{ij}(t)exp\left[C_{i} + \sum_{k=1}^{S}B_{ik}X_{kj}(t)+A_{ij}(t)\right]+I_{ij}(t)-X_{ij}(t)a_{i}
@@ -104,7 +104,7 @@ $$
 m = \sqrt{\frac{\partial f(x,y)}{\partial x}^2 + \frac{\partial f(x,y)}{\partial y}^2}
 $${#eq-womble}
 
-The spatial wombling analyses were done using `SpatialBoundaries.jl` [@strydomSpatialBoundariesJlEdge2023]. The docuemntation provides a more detailed breakdown of the underlying methodology.
+The spatial wombling analyses were done using `SpatialBoundaries.jl` [@Strydom2023Spatialboundariesa]. The docuemntation provides a more detailed breakdown of the underlying methodology.
 
 ## Conclusion
 
