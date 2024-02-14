@@ -98,10 +98,10 @@ administration</role>
 <corresp id="cor-2">timothee.poisot@umontreal.ca</corresp>
 </author-notes>
 
-<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-05">
+<pub-date date-type="pub" publication-format="electronic" iso-8601-date="2024-02-14">
 <year>2024</year>
 <month>2</month>
-<day>5</day>
+<day>14</day>
 </pub-date>
 
 
@@ -270,9 +270,9 @@ Nacional (IGN). …</p>
     and can be further expanded as follows:</p>
     <p><disp-formula><alternatives>
     <tex-math><![CDATA[
-    \hat{A}_{ij}(t)=h\times\frac{1}{\sigma\sqrt{2\pi}}\exp-\frac{1}{2}\left(\frac{(E_{j}(t)-H_{i})^2}{\sigma}\right)^2
+    \hat{A}_{ij}(t)=h\times\frac{1}{\sigma\sqrt{2\pi}}\exp-\frac{1}{2}\left(\frac{E_{j}(t)-H_{i}}{\sigma}\right)^2
     ]]></tex-math>
-    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mover><mml:mi>A</mml:mi><mml:mo accent="true">̂</mml:mo></mml:mover><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mi>h</mml:mi><mml:mo>×</mml:mo><mml:mfrac><mml:mn>1</mml:mn><mml:mrow><mml:mi>σ</mml:mi><mml:msqrt><mml:mrow><mml:mn>2</mml:mn><mml:mi>π</mml:mi></mml:mrow></mml:msqrt></mml:mrow></mml:mfrac><mml:mo>exp</mml:mo><mml:mo>−</mml:mo><mml:mfrac><mml:mn>1</mml:mn><mml:mn>2</mml:mn></mml:mfrac><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mfrac><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:msub><mml:mi>E</mml:mi><mml:mi>j</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mi>H</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mi>σ</mml:mi></mml:mfrac><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:math></alternatives></disp-formula></p>
+    <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:msub><mml:mover><mml:mi>A</mml:mi><mml:mo accent="true">̂</mml:mo></mml:mover><mml:mrow><mml:mi>i</mml:mi><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mi>h</mml:mi><mml:mo>×</mml:mo><mml:mfrac><mml:mn>1</mml:mn><mml:mrow><mml:mi>σ</mml:mi><mml:msqrt><mml:mrow><mml:mn>2</mml:mn><mml:mi>π</mml:mi></mml:mrow></mml:msqrt></mml:mrow></mml:mfrac><mml:mo>exp</mml:mo><mml:mo>−</mml:mo><mml:mfrac><mml:mn>1</mml:mn><mml:mn>2</mml:mn></mml:mfrac><mml:msup><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mfrac><mml:mrow><mml:msub><mml:mi>E</mml:mi><mml:mi>j</mml:mi></mml:msub><mml:mrow><mml:mo stretchy="true" form="prefix">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mo>−</mml:mo><mml:msub><mml:mi>H</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:mrow><mml:mi>σ</mml:mi></mml:mfrac><mml:mo stretchy="true" form="postfix">)</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:math></alternatives></disp-formula></p>
     <p><styled-content id="eq-metacomm_env"><disp-formula><alternatives>
     <tex-math><![CDATA[
     A_{ij}(t)= \hat{A}_{ij}(t) - max(\hat{A})
