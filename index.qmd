@@ -7,11 +7,10 @@ author:
     email: t.strydom@sheffield.ac.uk
     roles:
       - Investigation
-      - Project administration
       - Software
       - Visualization
     affiliations:
-      - Curvenote
+      - Uum??
   - name: Timothée Poisot
     orcid: 0000-0002-0735-5184
     corresponding: true
@@ -24,12 +23,7 @@ keywords:
   - wombling
   - spatial networks
 abstract: |
-  In September 2021, a significant jump in seismic activity on the island of La Palma (Canary Islands, Spain) signaled the start of a volcanic crisis that still continues at the time of writing. Earthquake data is continually collected and published by the Instituto Geográphico Nacional (IGN). ...
-plain-language-summary: |
-  Earthquake data for the island of La Palma from the September 2021 eruption is found ...
-key-points:
-  - A web scraping script was developed to pull data from the Instituto Geogràphico Nacional into a machine-readable form for analysis
-  - Earthquake events on La Palma are consistent with the presence of both mantle and crustal reservoirs.
+  TODO
 date: last-modified
 bibliography: references.bib
 citation:
@@ -45,23 +39,23 @@ jupyter: python3
 
 ### Metacommunity model
 
-The metacommunity model developed by @Thompson2017Dispersala is a good starting point to use for this 'case study' as it allows us some flexibility with how we want to parameterise the system. The model (@eq-metacomm) itself is based on a tritrophic community ('plants', 'herbivores', and 'carnivores') and is a collection of modified Lotka–Volterra equations and (broadly) models species abundance as a function of interaction strength, environmental effect, immigration, and emigration. The metacommunity consists of $S$ species with $M$ environmental patches and looks as follows:
+The model used broadly follows the metacommunity model developed by @thompsonDispersalGovernsReorganization2017. The model (@eq-metacomm) itself is based on a tritrophic community ('plants', 'herbivores', and 'carnivores'), and is essentially a collection of modified Lotka–Volterra equations, this (broadly) models species abundance as a function of interaction strength, environmental effect, immigration, and emigration. The metacommunity consists of $S$ species with $M$ environmental patches in the landscape and looks as follows:
 
 $$
 X_{ij}(t+1)=X_{ij}(t)exp\left[C_{i} + \sum_{k=1}^{S}B_{ik}X_{kj}(t)+A_{ij}(t)\right]+I_{ij}(t)-X_{ij}(t)a_{i}
 $$ {#eq-metacomm}
 
-Where $X_{ij}(t)$ is the abundance of species $i$ in patch $j$ at time $t$. $C_i$ is its intrinsic rate of increase (which we have set to 0.1 for 'plants' and -0.01 for 'herbivores' and 'carnivores'). $B_{ik}$ is the per capita effect of species $k$ on species $i$. The exact interaction strength for each species pair is drawn from a uniform distribution with the parameters for the interaction pairs listed in @tbl-interaction_strength, the values drawn from the uniform distribution are scaled by dividing by $0.33S$ to yield the final interaction strength for each interacting pair.
+Where $X_{ij}(t)$ is the abundance of species $i$ in patch $j$ at time $t$. $C_i$ is its intrinsic rate of increase (which we have set to 0.1 for 'plants' and -0.001 for 'herbivores' and 'carnivores'). $B_{ik}$ is the per capita effect of species $k$ on species $i$. The exact interaction strength for each species pair is determined by the trophic level of each species and is drawn from a uniform distribution. The ranges for each combination of species pairs listed in @tbl-interaction_strength, the values that are drawn from the uniform distribution are then scaled by dividing by $0.33S$ to yield the final interaction strength for each interacting pair.
 
 
 | Interacting pair    | Range of uniform distribution|
 |---------------------|:----------------------------:|
 | Plant-plant         | -1.0 -- 0.00                 |
-| Plant-herbivore     |  0.0 -- 0.10                 |
+| Plant-herbivore     | 0.0 -- 0.10                  |
 | Plant-carnivore     | 0.0                          |
 | Herbivore-plant     | -0.3 -- 0.00                 |
-| Herbivore-herbivore | -0.2-- -0.15                 |
-| Herbivore-carnivore |  0.0 -- 0.08                 |
+| Herbivore-herbivore | -0.2 -- -0.15                |
+| Herbivore-carnivore | 0.0 -- 0.08                  |
 | Carnivore-plant     | 0.0                          |
 | Carnivore-herbivore | -0.1 -- 0.00                 |
 | Carnivore-carnivore | -0.1 -- 0.00                 |
@@ -71,14 +65,10 @@ Where $X_{ij}(t)$ is the abundance of species $i$ in patch $j$ at time $t$. $C_i
 $A_{ij}(t)$ is the effect of the environment in patch $j$ on species $i$ at time $t$ and can be further expanded as follows:  
 
 $$
-\hat{A}_{ij}(t)=h\times\frac{1}{\sigma\sqrt{2\pi}}\exp-\frac{1}{2}\left(\frac{E_{j}(t)-H_{i}}{\sigma}\right)^2
-$$
-
-$$
-A_{ij}(t)= \hat{A}_{ij}(t) - max(\hat{A})
+A_{ij}(t)=\left(h\times\frac{1}{\sigma\sqrt{2\pi}}\right)\times\left(e^{-\left(E_{j}(t)-H_{i}\right)^2/{2\sigma}^2}-1\right)
 $$ {#eq-metacomm_env}
 
-Species environmental optima ($H_i$) are evenly distributed across the entire range of environmental conditions for each trophic level, meaning that species from different trophic levels will be at, or near the same environmental optima. $h$ is a scaling parameter (set to 300), $E_j(t)$ is the environment in patch $j$ at time $t$ and $\sigma$ is the standard deviation (set to 50).
+Where the species environmental optima ($H_i$) are evenly distributed across the entire range of environmental conditions for each trophic level, meaning that species from different trophic levels will be at, or near the same environmental optima. $h$ is a scaling parameter (set to **50**), $E_j(t)$ is the environment in patch $j$ at time $t$ and $\sigma$ is the standard deviation (set to **50**).
 
 $I_{ij}(t)$ is the abundance of species $i$ immigrating to patch $j$ at time $t$ and can be expanded as follows:
 
@@ -91,24 +81,33 @@ Where $ai$ is the proportion of the population of species $i$ that disperses at 
 | Trophic level | $\mu$ | $\sigma$ |
 |---------------|:-----:|:--------:|
 | Plant         | 0.3   | 0.075    |
-| Herbivore     | 0.2   | 0.050     |
+| Herbivore     | 0.2   | 0.050    |
 | Carnivore     | 0.1   | 0.025    |
 
 : Parameters for the normal distributions used to determine the dispersal decay ($L$) for each species depending on its trophic level. {#tbl-interaction_decay}
 
 ### Generating networks
 
-More info on the baking process and the various connectivity stuff and whatnot
+In order to create a final community state the species are allowed to persist for a total of 2000 generations. These generations are broken down into three 'phases' the first is the 'proofing' phase where the environment is uniform throughout the landscape (meaning that all species are at their environmental optimum) for 500 generations. After this the environment is 'heated' incrementally until it reaches its 'final state', the environmental optimum of each species is also adjusted as the environmental values begin to change. This occurs over a period of 1 000 generations. The landscape is then held stable for a further 500 generations until an equilibrium is reached. The final state of the landscape is predetermined and is defined by the diamond-square algorithm (this produces fractals with variable spatial autocorrelation) which is generated using `NeutralLandscapes.jl` [@catchenEcoJuliaNeutralLandscapesJl2023], here we vary the degree of landscape heterogeneity by **TODO**.
+
+| Parameter     | Value |
+|---------------|:-----:|
+| $S$           | 100   |
+| $M$           | 26*26 |
+| $E_{initial}$ | 40    |
+| $A_{initial}$ | 0.01  |
+
+:Starting parameters for the model. {#tbl-model_params}
 
 ### Spatial wombling
 
-Broadly speaking spatial wombling is an edge-detection algorithm which traverses a geographic area and defines this area in terms of the rate ($m$) and corresponding direction ($\theta$) of change. This is done by using first-order partial derivative ($\partial$) of the 'curvature' of the landscape as described by $f(x,y)$ (see @eq-womble). This essentially gives an indiaction how steep the gradient ($m$) is between neighbouring cells as well as the direction ($\theta$) of the slope. 
+Broadly speaking spatial wombling is an edge-detection algorithm which traverses a geographic area and defines this area in terms of the rate ($m$) and corresponding direction ($\theta$) of change. This is done by using first-order partial derivative ($\partial$) of the 'curvature' of the landscape as described by $f(x,y)$ (see @eq-womble). This essentially gives an indication how steep the gradient ($m$) is between neighbouring cells as well as the direction ($\theta$) of the slope. 
 
 $$
 m = \sqrt{\frac{\partial f(x,y)}{\partial x}^2 + \frac{\partial f(x,y)}{\partial y}^2}
 $${#eq-womble}
 
-The spatial wombling analyses were done using `SpatialBoundaries.jl` [@Strydom2023Spatialboundariesa]. The docuemntation provides a more detailed breakdown of the underlying methodology.
+The spatial wombling analyses were done using `SpatialBoundaries.jl` [@strydomSpatialBoundariesJlEdge2023]. The documentation provides a more detailed breakdown of the underlying methodology.
 
 ## Conclusion
 
