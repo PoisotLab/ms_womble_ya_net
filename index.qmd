@@ -62,10 +62,10 @@ Where $X_{ij}(t)$ is the abundance of species $i$ in patch $j$ at time $t$. $C_i
 
 : Intervals used for the uniform distribution from which interaction strengths values are drawn from for the different types of species pair interactions. Note this is represent the effect of species type 1 on species type 2 *i.e.,* herbivore-plant represents the effect of a herbivore species on a plant species {#tbl-interaction_strength}
 
-$A_{ij}(t)$ is the effect of the environment in patch $j$ on species $i$ at time $t$ and can be further expanded as follows:  
+$A_{ij}(t)$ is the effect of the environment in patch $j$ on species $i$ at time $t$. Essentially this will set the effect of the environment to zero when it is at the optimum of the species and can be further expanded as follows:  
 
 $$
-A_{ij}(t)=\left(h\times\frac{1}{\sigma\sqrt{2\pi}}\right)\times\left(e^{-\left(E_{j}(t)-H_{i}\right)^2/{2\sigma}^2}-1\right)
+A_{ij}(t)=\left(h\times\frac{1}{\sigma\sqrt{2\pi}}\right)\times\left(\text{exp}\left[-\frac{(E_{j}(t)-H_{i})^2}{{2\sigma}^2}\right]-1\right)
 $$ {#eq-metacomm_env}
 
 Where the species environmental optima ($H_i$) are evenly distributed across the entire range of environmental conditions for each trophic level, meaning that species from different trophic levels will be at, or near the same environmental optima. $h$ is a scaling parameter (set to **50**), $E_j(t)$ is the environment in patch $j$ at time $t$ and $\sigma$ is the standard deviation (set to **50**).
