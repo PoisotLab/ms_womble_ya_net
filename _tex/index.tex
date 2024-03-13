@@ -252,10 +252,12 @@ Carnivore-carnivore & -0.1 -- 0.00 \\
 \end{longtable}
 
 \(A_{ij}(t)\) is the effect of the environment in patch \(j\) on species
-\(i\) at time \(t\) and can be further expanded as follows:
+\(i\) at time \(t\). Essentially this will set the effect of the
+environment to zero when it is at the optimum of the species and can be
+further expanded as follows:
 
 \begin{equation}\phantomsection\label{eq-metacomm_env}{
-A_{ij}(t)=\left(h\times\frac{1}{\sigma\sqrt{2\pi}}\right)\times\left(e^{-\left(E_{j}(t)-H_{i}\right)^2/{2\sigma}^2}-1\right)
+A_{ij}(t)=\left(h\times\frac{1}{\sigma\sqrt{2\pi}}\right)\times\left(\text{exp}\left[-\frac{(E_{j}(t)-H_{i})^2}{{2\sigma}^2}\right]-1\right)
 }\end{equation}
 
 Where the species environmental optima (\(H_i\)) are evenly distributed
