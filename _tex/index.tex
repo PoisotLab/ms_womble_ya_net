@@ -75,6 +75,39 @@
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \usepackage{url} %this package should fix any errors with URLs in refs.
 \usepackage{lineno}
@@ -148,22 +181,15 @@
 \title{Omnomnomnivores}
 
 \authors{Tanya Strydom\affil{1}, Timothée Poisot\affil{2,3}}
-\affiliation{1}{Curvenote, }\affiliation{2}{Université de
+\affiliation{1}{Uum??, }\affiliation{2}{Université de
 Montreal, }\affiliation{3}{Québec Centre for Biodiversity Sciences, }
 \correspondingauthor{Timothée Poisot}{timothee.poisot@umontreal.ca}
 
 
 \begin{abstract}
-In September 2021, a significant jump in seismic activity on the island
-of La Palma (Canary Islands, Spain) signaled the start of a volcanic
-crisis that still continues at the time of writing. Earthquake data is
-continually collected and published by the Instituto Geográphico
-Nacional (IGN). \ldots{}
+TODO
 \end{abstract}
 
-\section*{Plain Language Summary}
-Earthquake data for the island of La Palma from the September 2021
-eruption is found \ldots{}
 
 
 
@@ -173,15 +199,14 @@ eruption is found \ldots{}
 
 \subsection{Metacommunity model}\label{metacommunity-model}
 
-The metacommunity model developed by (\textbf{Thompson2017Dispersala?})
-is a good starting point to use for this `case study' as it allows us
-some flexibility with how we want to parameterise the system. The model
-(Equation~\ref{eq-metacomm}) itself is based on a tritrophic community
-(`plants', `herbivores', and `carnivores') and is a collection of
-modified Lotka--Volterra equations and (broadly) models species
-abundance as a function of interaction strength, environmental effect,
-immigration, and emigration. The metacommunity consists of \(S\) species
-with \(M\) environmental patches and looks as follows:
+The model used broadly follows the metacommunity model developed by
+Thompson \& Gonzalez (2017). The model (Equation~\ref{eq-metacomm})
+itself is based on a tritrophic community (`plants', `herbivores', and
+`carnivores'), and is essentially a collection of modified
+Lotka--Volterra equations, this (broadly) models species abundance as a
+function of interaction strength, environmental effect, immigration, and
+emigration. The metacommunity consists of \(S\) species with \(M\)
+environmental patches in the landscape and looks as follows:
 
 \begin{equation}\phantomsection\label{eq-metacomm}{
 X_{ij}(t+1)=X_{ij}(t)exp\left[C_{i} + \sum_{k=1}^{S}B_{ik}X_{kj}(t)+A_{ij}(t)\right]+I_{ij}(t)-X_{ij}(t)a_{i}
@@ -189,12 +214,13 @@ X_{ij}(t+1)=X_{ij}(t)exp\left[C_{i} + \sum_{k=1}^{S}B_{ik}X_{kj}(t)+A_{ij}(t)\ri
 
 Where \(X_{ij}(t)\) is the abundance of species \(i\) in patch \(j\) at
 time \(t\). \(C_i\) is its intrinsic rate of increase (which we have set
-to 0.1 for `plants' and -0.01 for `herbivores' and `carnivores').
+to 0.1 for `plants' and -0.001 for `herbivores' and `carnivores').
 \(B_{ik}\) is the per capita effect of species \(k\) on species \(i\).
-The exact interaction strength for each species pair is drawn from a
-uniform distribution with the parameters for the interaction pairs
-listed in Table~\ref{tbl-interaction_strength}, the values drawn from
-the uniform distribution are scaled by dividing by \(0.33S\) to yield
+The exact interaction strength for each species pair is determined by
+the trophic level of each species and is drawn from a uniform
+distribution. The ranges for each combination of species pairs listed in
+Table~\ref{tbl-interaction_strength}, the values that are drawn from the
+uniform distribution are then scaled by dividing by \(0.33S\) to yield
 the final interaction strength for each interacting pair.
 
 \begin{longtable}[]{@{}lc@{}}
@@ -218,7 +244,7 @@ Plant-plant & -1.0 -- 0.00 \\
 Plant-herbivore & 0.0 -- 0.10 \\
 Plant-carnivore & 0.0 \\
 Herbivore-plant & -0.3 -- 0.00 \\
-Herbivore-herbivore & -0.2-- -0.15 \\
+Herbivore-herbivore & -0.2 -- -0.15 \\
 Herbivore-carnivore & 0.0 -- 0.08 \\
 Carnivore-plant & 0.0 \\
 Carnivore-herbivore & -0.1 -- 0.00 \\
@@ -228,20 +254,16 @@ Carnivore-carnivore & -0.1 -- 0.00 \\
 \(A_{ij}(t)\) is the effect of the environment in patch \(j\) on species
 \(i\) at time \(t\) and can be further expanded as follows:
 
-\[
-\hat{A}_{ij}(t)=h\times\frac{1}{\sigma\sqrt{2\pi}}\exp-\frac{1}{2}\left(\frac{E_{j}(t)-H_{i}}{\sigma}\right)^2
-\]
-
 \begin{equation}\phantomsection\label{eq-metacomm_env}{
-A_{ij}(t)= \hat{A}_{ij}(t) - max(\hat{A})
+A_{ij}(t)=\left(h\times\frac{1}{\sigma\sqrt{2\pi}}\right)\times\left(e^{-\left(E_{j}(t)-H_{i}\right)^2/{2\sigma}^2}-1\right)
 }\end{equation}
 
-Species environmental optima (\(H_i\)) are evenly distributed across the
-entire range of environmental conditions for each trophic level, meaning
-that species from different trophic levels will be at, or near the same
-environmental optima. \(h\) is a scaling parameter (set to 300),
-\(E_j(t)\) is the environment in patch \(j\) at time \(t\) and
-\(\sigma\) is the standard deviation (set to 50).
+Where the species environmental optima (\(H_i\)) are evenly distributed
+across the entire range of environmental conditions for each trophic
+level, meaning that species from different trophic levels will be at, or
+near the same environmental optima. \(h\) is a scaling parameter (set to
+\textbf{50}), \(E_j(t)\) is the environment in patch \(j\) at time \(t\)
+and \(\sigma\) is the standard deviation (set to \textbf{50}).
 
 \(I_{ij}(t)\) is the abundance of species \(i\) immigrating to patch
 \(j\) at time \(t\) and can be expanded as follows:
@@ -281,8 +303,39 @@ Carnivore & 0.1 & 0.025 \\
 
 \subsection{Generating networks}\label{generating-networks}
 
-More info on the baking process and the various connectivity stuff and
-whatnot
+In order to create a final community state the species are allowed to
+persist for a total of 2000 generations. These generations are broken
+down into three `phases' the first is the `proofing' phase where the
+environment is uniform throughout the landscape (meaning that all
+species are at their environmental optimum) for 500 generations. After
+this the environment is `heated' incrementally until it reaches its
+`final state', the environmental optimum of each species is also
+adjusted as the environmental values begin to change. This occurs over a
+period of 1 000 generations. The landscape is then held stable for a
+further 500 generations until an equilibrium is reached. The final state
+of the landscape is predetermined and is defined by the diamond-square
+algorithm (this produces fractals with variable spatial autocorrelation)
+which is generated using \texttt{NeutralLandscapes.jl} (Catchen, 2023),
+here we vary the degree of landscape heterogeneity by \textbf{TODO}.
+
+\begin{longtable}[]{@{}lc@{}}
+\caption{Starting parameters for the
+model.}\label{tbl-model_params}\tabularnewline
+\toprule\noalign{}
+Parameter & Value \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Parameter & Value \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(S\) & 100 \\
+\(M\) & 26*26 \\
+\(E_{initial}\) & 40 \\
+\(A_{initial}\) & 0.01 \\
+\end{longtable}
 
 \subsection{Spatial wombling}\label{spatial-wombling}
 
@@ -291,7 +344,7 @@ traverses a geographic area and defines this area in terms of the rate
 (\(m\)) and corresponding direction (\(\theta\)) of change. This is done
 by using first-order partial derivative (\(\partial\)) of the
 `curvature' of the landscape as described by \(f(x,y)\) (see
-Equation~\ref{eq-womble}). This essentially gives an indiaction how
+Equation~\ref{eq-womble}). This essentially gives an indication how
 steep the gradient (\(m\)) is between neighbouring cells as well as the
 direction (\(\theta\)) of the slope.
 
@@ -300,8 +353,8 @@ m = \sqrt{\frac{\partial f(x,y)}{\partial x}^2 + \frac{\partial f(x,y)}{\partial
 }\end{equation}
 
 The spatial wombling analyses were done using
-\texttt{SpatialBoundaries.jl} (\textbf{Strydom2023Spatialboundariesa?}).
-The docuemntation provides a more detailed breakdown of the underlying
+\texttt{SpatialBoundaries.jl} (Strydom \& Poisot, 2023). The
+documentation provides a more detailed breakdown of the underlying
 methodology.
 
 \section{Conclusion}\label{conclusion}
@@ -314,6 +367,25 @@ methodology.
 \textsubscript{Source:
 \href{https://PoisotLab.github.io/ms_womble_ya_net/index.qmd.html}{Article
 Notebook}}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-catchenEcoJuliaNeutralLandscapesJl2023}
+Catchen, M. D. (2023, December). {EcoJulia}/{NeutralLandscapes}.jl.
+EcoJulia.
+
+\bibitem[\citeproctext]{ref-strydomSpatialBoundariesJlEdge2023}
+Strydom, T., \& Poisot, T. (2023). {SpatialBoundaries}.jl: Edge
+detection using spatial wombling. \emph{Ecography}, \emph{2023}(5),
+e06609. \url{https://doi.org/10.1111/ecog.06609}
+
+\bibitem[\citeproctext]{ref-thompsonDispersalGovernsReorganization2017}
+Thompson, P. L., \& Gonzalez, A. (2017). Dispersal governs the
+reorganization of ecological networks under environmental change.
+\emph{Nature Ecology \& Evolution}, \emph{1}(6), 0162.
+\url{https://doi.org/10.1038/s41559-017-0162}
+
+\end{CSLReferences}
 
 
 
